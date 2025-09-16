@@ -156,568 +156,1166 @@
                     }
                 ]
             },
-            // Other topics... dynamically generated placeholder
-            ...Array.from({ length: 23 }, (_, i) => i + 2).reduce((acc, i) => {
-                acc[i] = {
-                    title: topics[i],
-                    subtopics: [
-                        { title: `Questions about ${topics[i]}`, questions: ["This is a placeholder. Please add specific questions."] }
-                    ]
-                };
-                return acc;
-            }, {}),
-            // Topic 24: Kopřivnice
-            24: {
-                 title: "Kopřivnice",
-                 subtopics: [
+            // Topic 2: Animals
+            2: {
+                title: "Animals",
+                subtopics: [
                     {
-                        title: "History of Kopřivnice",
+                        title: "Tree of Life - Animal Categories",
                         questions: [
-                            "What do you know about the history of Kopřivnice?",
-                            "Can you talk about the significance of the Tatra company for the town?",
-                            "Are there any famous historical figures associated with Kopřivnice?"
+                            "What are the main categories of animals (e.g., mammals, birds, reptiles, fish, insects)?",
+                            "What are the key differences between a mammal and a reptile?",
+                            "Can you explain the difference between vertebrates and invertebrates? Give examples.",
+                            "Where do humans fit into the animal kingdom's classification system?"
                         ]
                     },
                     {
-                        title: "Places of Interest",
+                        title: "Human Uses of Animals",
                         questions: [
-                            "What are the main tourist attractions in Kopřivnice?",
-                            "Describe the Tatra Technical Museum. Why is it famous?",
-                            "Besides the museum, what other places would you recommend a visitor to see?",
-                            "Are there any interesting natural spots in or around the town?"
+                            "What are the different ways humans use animals? (e.g., as pets, for food, for work)",
+                            "Discuss the pros and cons of keeping animals in zoos.",
+                            "What is your opinion on using animals for scientific research?",
+                            "Talk about the role of guide dogs or other service animals in society."
                         ]
                     },
                     {
-                        title: "Events and Culture",
+                        title: "Endangered, Extinct and Endemic Animals",
                         questions: [
-                            "Are there any annual events or festivals that take place in Kopřivnice?",
-                            "What opportunities for culture and entertainment does the town offer?",
-                            "How would you describe the atmosphere or character of Kopřivnice to a foreigner?"
+                            "What are the main reasons why animals become endangered?",
+                            "Can you name some endangered species and the efforts being made to save them?",
+                            "What is the difference between an extinct and an endangered animal?",
+                            "What does 'endemic' mean? Can you give an example of an endemic species in a specific country (e.g., Australia)?"
                         ]
                     }
                 ]
-            }
+            },
+            3: { // Problems of Mankind
+                title: "Problems of Mankind",
+                subtopics: [
+                    {
+                        title: "Migration",
+                        questions: [
+                            "What are the main reasons people migrate to other countries (e.g., economic, political, environmental)?",
+                            "What challenges do immigrants and refugees face when they move to a new country?",
+                            "What are the positive and negative impacts of migration on a host country?",
+                            "Should developed countries accept more migrants? Why or why not?"
+                        ]
+                    },
+                    {
+                        title: "Terrorism & Religion",
+                        questions: [
+                            "How would you define terrorism?",
+                            "What is the relationship between terrorism and religious extremism?",
+                            "What are some of the most significant terrorist attacks in recent history and what were their consequences?",
+                            "How has terrorism changed the way we live and travel?"
+                        ]
+                    },
+                    {
+                        title: "Diseases & Epidemics",
+                        questions: [
+                            "What are some of the most dangerous diseases and epidemics in history?",
+                            "How did the COVID-19 pandemic affect the world?",
+                            "What is the role of vaccination in preventing the spread of diseases?",
+                            "What can individuals and governments do to prepare for future epidemics?"
+                        ]
+                    },
+                    {
+                        title: "Overpopulation",
+                        questions: [
+                            "What are the causes of overpopulation?",
+                            "What are the main problems associated with an increasing global population (e.g., resource depletion, pollution)?",
+                            "What are some possible solutions to the problem of overpopulation?",
+                            "Do you think overpopulation is a serious threat to the future of mankind? Explain your view."
+                        ]
+                    }
+                ]
+            },
+            4: { // Environmental Problems
+                title: "Environmental Problems",
+                subtopics: [
+                     {
+                        title: "Global Warming",
+                        questions: [
+                            "What is the greenhouse effect and how does it contribute to global warming?",
+                            "What are the main human activities that cause climate change?",
+                            "What are the consequences of global warming for the planet and for people?",
+                            "What can individuals do to help combat climate change?"
+                        ]
+                    },
+                    {
+                        title: "Pollution",
+                        questions: [
+                            "What are the different types of pollution (air, water, soil, plastic)?",
+                            "What are the main sources of pollution in your local area?",
+                            "How does plastic pollution affect oceans and wildlife?",
+                            "What measures can governments and companies take to reduce pollution?"
+                        ]
+                    },
+                    {
+                        title: "Natural Disasters",
+                        questions: [
+                            "What are some examples of natural disasters?",
+                            "Are natural disasters becoming more frequent or more intense? Why?",
+                            "How can communities prepare for natural disasters like floods, earthquakes, or hurricanes?",
+                            "What is the role of international aid when a major natural disaster occurs?"
+                        ]
+                    }
+                ]
+            },
+            5: { // Culture and Entertainment
+                title: "Culture and Entertainment",
+                subtopics: [
+                    {
+                        title: "National and Foreign Cultures",
+                        questions: [
+                            "What are some typical cultural traditions in the Czech Republic (e.g., music, food, festivals)?",
+                            "How does Czech culture differ from British or American culture?",
+                            "What are the benefits of experiencing foreign cultures?",
+                            "How has globalization affected national cultures around the world?"
+                        ]
+                    },
+                    {
+                        title: "Forms of Entertainment",
+                        questions: [
+                            "What are your favorite forms of entertainment (e.g., movies, music, theatre, video games)?",
+                            "How has technology changed the way we entertain ourselves?",
+                            "Compare going to the cinema with watching a film at home. What are the pros and cons?",
+                            "Do you prefer live events (concerts, plays) or recorded entertainment? Why?"
+                        ]
+                    },
+                    {
+                        title: "Popular Culture & High Culture",
+                        questions: [
+                            "What is the difference between popular culture and high culture? Give examples.",
+                            "Is it important for people to experience 'high culture' like opera, ballet, or classical music? Why or why not?",
+                            "Do you think popular culture (e.g., pop music, blockbuster movies) has a positive or negative influence on society?",
+                            "Can something be part of both popular culture and high culture? Discuss."
+                        ]
+                    }
+                ]
+            },
+            6: { // Media, Internet
+                 title: "Media, Internet",
+                subtopics: [
+                    {
+                        title: "Different Types of Media",
+                        questions: [
+                            "What are the main types of media? (e.g., print, broadcast, digital)",
+                            "What are the advantages and disadvantages of getting news from television versus newspapers or online sources?",
+                            "How has the way people consume media changed over the last 20 years?",
+                            "Do you think traditional media like newspapers or radio still have a future?"
+                        ]
+                    },
+                    {
+                        title: "Internet (Social Media & Dark Side)",
+                        questions: [
+                            "What are the positive and negative effects of social media on individuals and society?",
+                            "What is 'fake news' and how can you recognize it?",
+                            "What do you know about the 'dark side of the web', such as cyberbullying or online scams?",
+                            "Is the internet making us more connected or more isolated? Discuss."
+                        ]
+                    },
+                    {
+                        title: "Journalism & Censorship",
+                        questions: [
+                            "What is the role of a journalist in society?",
+                            "What is censorship? Can censorship ever be justified?",
+                            "Should the media be regulated by the government, or should it be completely free?",
+                            "How does the concept of 'freedom of the press' differ in various countries?"
+                        ]
+                    }
+                ]
+            },
+            7: { // Science, Technology
+                title: "Science, Technology",
+                subtopics: [
+                    {
+                        title: "Inventions, Discoveries & Scientists",
+                        questions: [
+                            "What do you think is the most important invention in human history? Why?",
+                            "Can you name a famous scientist and describe their most significant discovery?",
+                            "How have inventions like the printing press or the internet changed society?",
+                            "If you could invent something, what would it be and what problem would it solve?"
+                        ]
+                    },
+                    {
+                        title: "Traditional & New Science",
+                        questions: [
+                            "What is the difference between traditional science (e.g., biology, chemistry) and new fields like data science?",
+                            "How has technology changed the way scientific research is conducted?",
+                            "Are there any areas where traditional scientific methods are still superior to modern ones?",
+                            "Discuss the importance of ethics in both traditional and new science."
+                        ]
+                    },
+                    {
+                        title: "Digital Technology & Artificial Intelligence",
+                        questions: [
+                            "How has digital technology (e.g., smartphones, computers) affected your daily life?",
+                            "What is Artificial Intelligence (AI)? Give some examples of AI you use.",
+                            "What are the potential benefits and dangers of developing advanced AI?",
+                            "Do you think AI will create more jobs than it eliminates? Explain your reasoning."
+                        ]
+                    },
+                    {
+                        title: "Science Future & Science Fiction",
+                        questions: [
+                            "What scientific breakthroughs do you expect to see in your lifetime?",
+                            "Do you think humans will ever live on other planets? Why or why not?",
+                            "How does science fiction (in books or movies) influence real scientific research and public expectations?",
+                            "What is a science fiction concept you would like to see become a reality?"
+                        ]
+                    }
+                ]
+            },
+            8: { // Shopping, Money
+                title: "Shopping, Money",
+                subtopics: [
+                    {
+                        title: "Types of Shops & Differences",
+                        questions: [
+                            "What are the differences between shopping in a large supermarket and a small local shop?",
+                            "What types of shops do you usually go to? (e.g., department stores, boutiques, markets)",
+                            "Describe your favourite shop. What does it sell and why do you like it?",
+                            "How has the shopping experience changed over the years?"
+                        ]
+                    },
+                    {
+                        title: "Internet Shopping",
+                        questions: [
+                            "What are the advantages and disadvantages of online shopping?",
+                            "What kind of things do you prefer to buy online versus in a physical store?",
+                            "What are the potential risks of internet shopping and how can you protect yourself?",
+                            "Do you think online shopping will completely replace traditional shops in the future?"
+                        ]
+                    },
+                    {
+                        title: "Personal Finances",
+                        questions: [
+                            "How important is it to learn how to manage your money from a young age?",
+                            "What are some effective ways to save money?",
+                            "Do you get pocket money? How do you decide what to spend it on?",
+                            "What are the differences between using cash, a credit card, and a mobile payment app?"
+                        ]
+                    },
+                    {
+                        title: "Consumerism",
+                        questions: [
+                            "What is consumerism and how does it affect our society?",
+                            "How does advertising influence your shopping choices?",
+                            "What is 'fast fashion' and what are its environmental and social impacts?",
+                            "Do you think people today buy too many things they don't need? Why or why not?"
+                        ]
+                    }
+                ]
+            },
+            9: { // Health, Keeping Fit
+                title: "Health, Keeping Fit",
+                subtopics: [
+                    {
+                        title: "Health Care",
+                        questions: [
+                            "Compare the health care system in the Czech Republic with one in an English-speaking country (e.g., the NHS in the UK).",
+                            "What are the pros and cons of public vs. private healthcare?",
+                            "What is the role of a general practitioner (GP) or family doctor?",
+                            "When would you need to go to a hospital's A&E (Accident & Emergency) department?"
+                        ]
+                    },
+                    {
+                        title: "Diseases, Injuries & Treatment",
+                        questions: [
+                            "What are some common illnesses (like the flu or a cold) and their symptoms?",
+                            "What should you do for a minor injury like a cut, a burn, or a sprain?",
+                            "Talk about a time you were ill or injured. What happened and what was the treatment?",
+                            "What is the purpose of antibiotics and why is it important to use them correctly?"
+                        ]
+                    },
+                    {
+                        title: "Healthy Lifestyle",
+                        questions: [
+                            "What are the key components of a healthy lifestyle?",
+                            "How important is regular physical exercise for your health? What kind of exercise do you enjoy?",
+                            "What are the effects of stress on health and what are some good ways to manage it?",
+                            "Do you think mental health is as important as physical health? Why or why not?"
+                        ]
+                    },
+                    {
+                        title: "Diseases of Civilization",
+                        questions: [
+                            "What are 'diseases of civilization' (e.g., obesity, heart disease, type 2 diabetes)?",
+                            "What aspects of modern life contribute to the rise of these diseases?",
+                            "How can changes in diet and lifestyle help prevent these conditions?",
+                            "What responsibility do governments and food companies have in promoting public health?"
+                        ]
+                    }
+                ]
+            },
+            10: { // Sports and Games
+                title: "Sports and Games",
+                subtopics: [
+                    {
+                        title: "Doing Sports (P.E., Reasons)",
+                        questions: [
+                            "Did you enjoy P.E. (Physical Education) classes at school? Why or why not?",
+                            "What are the main reasons people do sports? (e.g., for health, for fun, professionally)",
+                            "What are the benefits of being physically active from a young age?",
+                            "Do you prefer individual sports or team sports? Explain your preference."
+                        ]
+                    },
+                    {
+                        title: "Typical Sports of Czech Republic & English-Speaking Countries",
+                        questions: [
+                            "What are the most popular sports in the Czech Republic? Why are they so popular?",
+                            "Can you name some sports that are typical for the UK, USA, or Australia? (e.g., cricket, baseball, rugby)",
+                            "Compare a popular Czech sport with a popular sport from an English-speaking country.",
+                            "Have you ever tried a sport that is popular in another country? What was it like?"
+                        ]
+                    },
+                    {
+                        title: "Types of Sports",
+                        questions: [
+                            "What is the difference between winter sports and summer sports? Give examples.",
+                            "What are some examples of water sports, extreme sports, or combat sports?",
+                            "What kind of equipment is needed for your favourite sport?",
+                            "Do you think professional sports are over-commercialized today?"
+                        ]
+                    },
+                    {
+                        title: "Olympic Games",
+                        questions: [
+                            "What do you know about the history of the Olympic Games?",
+                            "What is the significance of the Olympic symbols, like the rings or the torch?",
+                            "What are some of the most popular summer and winter Olympic sports?",
+                            "Do you enjoy watching the Olympic Games? What is your favourite event to watch?"
+                        ]
+                    }
+                ]
+            },
+            11: { // Education
+                title: "Education",
+                subtopics: [
+                    {
+                        title: "Czech Education System",
+                        questions: [
+                            "Can you describe the structure of the Czech education system, from nursery school to university?",
+                            "What are the different types of secondary schools in the Czech Republic?",
+                            "What is the 'Maturita' exam and what does it involve?",
+                            "What are the strengths and weaknesses of the Czech education system, in your opinion?"
+                        ]
+                    },
+                    {
+                        title: "Education Systems in English-Speaking Countries",
+                        questions: [
+                            "How does the education system in the UK (or the US) differ from the Czech system?",
+                            "What do you know about famous universities like Oxford, Cambridge, or Harvard?",
+                            "What are A-levels in the UK or SATs in the US?",
+                            "Would you like to study abroad in an English-speaking country? Why or why not?"
+                        ]
+                    },
+                    {
+                        title: "My School",
+                        questions: [
+                            "Describe your school. What are its best features?",
+                            "What subjects do you study? Which is your favourite and least favourite? Why?",
+                            "Talk about a typical day at your school.",
+                            "If you could change anything about your school, what would it be?"
+                        ]
+                    }
+                ]
+            },
+            12: { // Jobs, My Future Career
+                title: "Jobs, My Future Career",
+                subtopics: [
+                    {
+                        title: "Types of Jobs",
+                        questions: [
+                            "What is the difference between a 'white collar' and a 'blue collar' job? Can you give examples?",
+                            "What are the advantages and disadvantages of being self-employed versus being an employee?",
+                            "What does it mean to be a 'freelancer'? What kind of professions often work this way?",
+                            "What are some jobs that require manual labour? What are some that are more office-based?"
+                        ]
+                    },
+                    {
+                        title: "Jobs of the Future",
+                        questions: [
+                            "What kind of jobs do you think will be in high demand in the future? Why?",
+                            "How do you think artificial intelligence and automation will change the job market?",
+                            "What new skills do you think people will need to learn for future jobs?",
+                            "Are there any jobs that you think will disappear completely in the next 20 years?"
+                        ]
+                    },
+                    {
+                        title: "My Future Career & Choosing a Job",
+                        questions: [
+                            "What are your plans for your future career? What would you like to do?",
+                            "What are the most important aspects to consider when choosing a job (e.g., salary, work-life balance, job satisfaction)?",
+                            "What qualifications or skills will you need for your desired career?",
+                            "Is it better to choose a job you love or a job that pays well? Discuss."
+                        ]
+                    }
+                ]
+            },
+            13: { // Travelling
+                title: "Travelling",
+                subtopics: [
+                    {
+                        title: "Types of Holidays",
+                        questions: [
+                            "What different types of holidays can you think of (e.g., beach holiday, city break, adventure travel)?",
+                            "What kind of holiday do you prefer and why?",
+                            "What are the pros and cons of a package holiday versus planning a trip yourself?",
+                            "Have you ever been on a camping or backpacking trip? What was it like?"
+                        ]
+                    },
+                    {
+                        title: "Means of Transport",
+                        questions: [
+                            "What are the different ways to travel (e.g., plane, train, car, bus, ship)?",
+                            "What are the advantages and disadvantages of travelling by plane?",
+                            "Which means of transport do you think is the most environmentally friendly?",
+                            "Talk about a memorable journey you have taken by train or car."
+                        ]
+                    },
+                    {
+                        title: "Places to Stay",
+                        questions: [
+                            "What are the different types of accommodation you can stay in on holiday (e.g., hotel, hostel, B&B, Airbnb)?",
+                            "What factors do you consider when choosing a place to stay?",
+                            "What are the benefits of staying in a self-catering apartment compared to a hotel?",
+                            "Describe the best or worst hotel you have ever stayed in."
+                        ]
+                    },
+                    {
+                        title: "Reasons for Travelling",
+                        questions: [
+                            "Why do people travel? What are the main motivations?",
+                            "Is it important to travel to other countries? Why or why not?",
+                            "How does travelling broaden your horizons?",
+                            "Do you prefer travelling alone, with family, or with friends? Explain why."
+                        ]
+                    }
+                ]
+            },
+            14: { // Interpersonal Relationships
+                title: "Interpersonal Relationships",
+                subtopics: [
+                    {
+                        title: "Marriage, Family, Relationships in the 21st Century",
+                        questions: [
+                            "How have the concepts of marriage and family changed over the last 50 years?",
+                            "What are the advantages and disadvantages of getting married versus living together?",
+                            "What makes a good friend or a good partner?",
+                            "How has technology and social media affected relationships?"
+                        ]
+                    },
+                    {
+                        title: "Stereotypes and Phobias",
+                        questions: [
+                            "What is a stereotype? Can you give some examples of common stereotypes (e.g., national, gender)?",
+                            "Why can stereotypes be harmful or dangerous?",
+                            "What is the difference between a fear and a phobia?",
+                            "How can society work to overcome prejudice and stereotypes?"
+                        ]
+                    },
+                    {
+                        title: "Generation Gap",
+                        questions: [
+                            "What is the 'generation gap'?",
+                            "What are some of the main differences between your generation and your parents' or grandparents' generation?",
+                            "In what areas do different generations often have disagreements (e.g., music, technology, values)?",
+                            "How can different generations learn from each other?"
+                        ]
+                    }
+                ]
+            },
+            15: { // Housing
+                title: "Housing",
+                subtopics: [
+                    {
+                        title: "Types of Houses",
+                        questions: [
+                            "What are the different types of houses you can live in (e.g., detached house, flat, bungalow, cottage)?",
+                            "What are the advantages of living in a house compared to living in a flat?",
+                            "Describe your ideal house. Where would it be and what would it look like?",
+                            "What do you think 'dream house' means to most people?"
+                        ]
+                    },
+                    {
+                        title: "Typical Housing in the Czech Republic and English-speaking countries",
+                        questions: [
+                            "What is typical housing like in the Czech Republic? (e.g., 'paneláky')",
+                            "How does typical housing in the UK or USA (e.g., terraced houses, suburban homes) differ from that in the Czech Republic?",
+                            "Do you live in a house or a flat? Describe it.",
+                            "What are some common features of houses in English-speaking countries, like a garden or a fireplace?"
+                        ]
+                    },
+                    {
+                        title: "Village vs. City – Advantages and Disadvantages",
+                        questions: [
+                            "What are the main advantages and disadvantages of living in a big city?",
+                            "What are the pros and cons of living in a small village in the countryside?",
+                            "Would you prefer to live in a city or in the countryside? Explain your choice.",
+                            "How does community life differ between a village and a city?"
+                        ]
+                    },
+                    {
+                        title: "Alternative Living",
+                        questions: [
+                            "What do you understand by the term 'alternative living' (e.g., tiny houses, houseboats, eco-homes)?",
+                            "What are the reasons someone might choose an alternative lifestyle like living in a tiny house?",
+                            "What are the challenges of living in a non-traditional home?",
+                            "Would you ever consider an 'alternative living' option? Why or why not?"
+                        ]
+                    }
+                ]
+            },
+            16: { // American Literature
+                title: "American Literature",
+                subtopics: [
+                    {
+                        title: "Timeline of American Literature",
+                        questions: [
+                            "Can you name some major periods in American literature? (e.g., Colonial, Romantic, Modernist)",
+                            "What were the main themes of early American writing?",
+                            "How did the Civil War influence American literature?",
+                            "What are some key characteristics of the Modernist period in American literature?"
+                        ]
+                    },
+                    {
+                        title: "Lost Generation",
+                        questions: [
+                            "Who were the 'Lost Generation' writers?",
+                            "What major historical event influenced their work?",
+                            "What are the common themes in the works of authors like Ernest Hemingway or F. Scott Fitzgerald?",
+                            "Can you talk about a famous novel from this period, like 'The Great Gatsby' or 'The Sun Also Rises'?"
+                        ]
+                    },
+                    {
+                        title: "Beat Generation",
+                        questions: [
+                            "Who were the key figures of the Beat Generation? (e.g., Jack Kerouac, Allen Ginsberg)",
+                            "What were they rebelling against in their writing?",
+                            "What are the main characteristics of Beat literature?",
+                            "Have you read any works from this movement, such as 'On the Road' or 'Howl'?"
+                        ]
+                    },
+                    {
+                        title: "My Favourite American Author",
+                        questions: [
+                            "Who is your favourite American author and why?",
+                            "Talk about one of their famous books. What is it about and what are the main themes?",
+                            "What makes this author's writing style unique?",
+                            "Would you recommend this author to others? Why?"
+                        ]
+                    }
+                ]
+            },
+            17: { // British Literature
+                title: "British Literature",
+                subtopics: [
+                    {
+                        title: "Drama",
+                        questions: [
+                            "Who is the most famous British playwright? Talk about one of his famous plays.",
+                            "What do you know about the theatre scene in London (e.g., The West End, Shakespeare's Globe)?",
+                            "Apart from Shakespeare, can you name any other important British dramatists (e.g., Oscar Wilde, George Bernard Shaw)?",
+                            "Have you ever seen a play by a British author? If so, what was it about?"
+                        ]
+                    },
+                    {
+                        title: "Poetry",
+                        questions: [
+                            "Can you name any famous British poets? (e.g., William Wordsworth, Lord Byron, John Keats)",
+                            "What are the main characteristics of Romantic poetry?",
+                            "Do you enjoy reading poetry? Why or why not?",
+                            "Can you recite a few lines from a famous British poem?"
+                        ]
+                    },
+                    {
+                        title: "19th Century Novel",
+                        questions: [
+                            "Who are the most important novelists of the 19th century in Britain? (e.g., Jane Austen, Charles Dickens, the Brontë sisters)",
+                            "What are the typical features of a Victorian novel?",
+                            "Talk about a 19th-century novel you have read, like 'Pride and Prejudice' or 'Oliver Twist'.",
+                            "How did the Industrial Revolution influence the novels of this period?"
+                        ]
+                    },
+                    {
+                        title: "My Favourite British Author",
+                        questions: [
+                            "Who is your favourite British author and why?",
+                            "Discuss one of their major works. What is the plot and what are the main ideas?",
+                            "How does this author's style make their work distinctive?",
+                            "Would you encourage others to read this author? Explain your reasons."
+                        ]
+                    }
+                ]
+            },
+            18: { // Canada
+                title: "Canada",
+                subtopics: [
+                    {
+                        title: "Geography & Places of Interest",
+                        questions: [
+                            "Describe the geography of Canada. What are its most significant natural features like the Rocky Mountains or the Great Lakes?",
+                            "What are some of Canada's most famous cities and landmarks? (e.g., Toronto, Vancouver, Niagara Falls)",
+                            "Canada is known for its national parks. Can you name one and describe what you might see there?",
+                            "How does Canada's vast size and diverse geography affect the lives of its people?"
+                        ]
+                    },
+                    {
+                        title: "Political System",
+                        questions: [
+                            "What type of government does Canada have?",
+                            "Who is the head of state in Canada, and who is the head of government?",
+                            "What do you know about the role of provinces and territories in Canada's political system?",
+                            "How is Canada's political system similar to or different from that of the UK or the USA?"
+                        ]
+                    },
+                    {
+                        title: "History",
+                        questions: [
+                            "Who were the original inhabitants of Canada?",
+                            "What were the roles of the British and the French in Canada's history?",
+                            "What is Confederation and why is it important in Canadian history?",
+                            "Can you mention a significant event from 20th-century Canadian history?"
+                        ]
+                    },
+                    {
+                        title: "What Makes It Unique?",
+                        questions: [
+                            "What are some symbols of Canada that you know? (e.g., the maple leaf, the beaver)",
+                            "Canada is officially bilingual. What does this mean and how does it affect the country's culture?",
+                            "What is Canada's reputation on the world stage? What is it known for?",
+                            "What aspects of Canadian culture, like multiculturalism or hockey, do you find most interesting?"
+                        ]
+                    }
+                ]
+            },
+            19: { // The United Kingdom
+                title: "The United Kingdom",
+                subtopics: [
+                    {
+                        title: "Geography & Places of Interest",
+                        questions: [
+                            "What are the four constituent countries of the United Kingdom? Can you name their capital cities?",
+                            "Describe the geography of Great Britain. Is it mostly flat or mountainous?",
+                            "What are some of London's most famous landmarks?",
+                            "Have you heard of other famous places in the UK, like Stonehenge or Loch Ness? What are they?"
+                        ]
+                    },
+                    {
+                        title: "Political System",
+                        questions: [
+                            "What type of government does the UK have?",
+                            "Who is the head of state and who is the head of government?",
+                            "What are the two houses of the British Parliament called?",
+                            "What is Brexit and how has it changed the UK's relationship with Europe?"
+                        ]
+                    },
+                    {
+                        title: "History",
+                        questions: [
+                            "Can you mention some important periods in British history, like the Roman occupation, the Tudors, or the Victorian era?",
+                            "What was the British Empire?",
+                            "Who are some of the most famous monarchs in British history?",
+                            "Talk about a significant event from 20th-century British history, like World War II."
+                        ]
+                    },
+                    {
+                        title: "What Makes It Unique?",
+                        questions: [
+                            "What are some symbols of the UK or its individual countries, like the Union Jack or a red double-decker bus?",
+                            "What stereotypes are associated with British people?",
+                            "Talk about some aspects of British culture that are famous around the world, such as its music, the tradition of tea, or the Royal Family.",
+                            "What do you find most interesting or unique about the United Kingdom?"
+                        ]
+                    }
+                ]
+            },
+            20: { // The United States of America
+                title: "The United States of America",
+                subtopics: [
+                    {
+                        title: "Geography & Places of Interest",
+                        questions: [
+                            "Describe the geographical diversity of the USA, from its coastlines to mountains and deserts.",
+                            "What are some of the most famous American cities and what are they known for? (e.g., New York, Los Angeles, Chicago)",
+                            "Can you name some famous US national parks, like the Grand Canyon or Yellowstone?",
+                            "What are the major regions of the United States (e.g., the East Coast, the Midwest, the South) and how do they differ?"
+                        ]
+                    },
+                    {
+                        title: "Political System",
+                        questions: [
+                            "What type of government does the United States have?",
+                            "Who is the head of state and head of government in the USA?",
+                            "What are the three branches of the US federal government?",
+                            "What do you know about the two major political parties in the USA, the Democrats and the Republicans?"
+                        ]
+                    },
+                    {
+                        title: "History",
+                        questions: [
+                            "What do you know about the American Revolution and the Declaration of Independence?",
+                            "What was the American Civil War about?",
+                            "Who were some of the most important figures in American history? (e.g., George Washington, Abraham Lincoln, Martin Luther King Jr.)",
+                            "Talk about a significant event from 20th-century American history, like the Great Depression or the Cold War."
+                        ]
+                    },
+                    {
+                        title: "What Makes It Unique?",
+                        questions: [
+                            "What are some famous symbols of the USA, like the Statue of Liberty or the American flag?",
+                            "What is the 'American Dream'?",
+                            "What aspects of American culture (e.g., Hollywood movies, fast food, jazz music) are influential around the world?",
+                            "What do you find most fascinating or unique about the United States?"
+                        ]
+                    }
+                ]
+            },
+            21: { // Australia
+                title: "Australia",
+                subtopics: [
+                    {
+                        title: "Geography & Places of Interest",
+                        questions: [
+                            "Describe the geography of Australia. What is the Outback and what is it like?",
+                            "What are some of Australia's most famous cities and natural landmarks? (e.g., Sydney Opera House, Uluru, Great Barrier Reef)",
+                            "What do you know about the climate in different parts of Australia?",
+                            "Australia is famous for its beaches. Why is beach culture so important there?"
+                        ]
+                    },
+                    {
+                        title: "Political System",
+                        questions: [
+                            "What type of government does Australia have?",
+                            "Who is Australia's head of state, and who is the head of government?",
+                            "How is Australia's political system similar to that of the United Kingdom?",
+                            "What are the names of some Australian states or territories?"
+                        ]
+                    },
+                    {
+                        title: "History",
+                        questions: [
+                            "Who are the Aboriginal and Torres Strait Islander peoples, the original inhabitants of Australia?",
+                            "What was the role of the British in Australia's history, especially its beginning as a penal colony?",
+                            "Who was Captain James Cook and why is he a significant figure in Australian history?",
+                            "What do you know about the 'gold rush' in Australia?"
+                        ]
+                    },
+                    {
+                        title: "What Makes It Unique?",
+                        questions: [
+                            "What makes Australia's wildlife so unique? Can you name some famous Australian animals?",
+                            "What are some well-known symbols of Australia?",
+                            "What stereotypes are often associated with Australians?",
+                            "Talk about some aspects of Australian culture, like surfing, barbecues ('barbies'), or Australian rules football."
+                        ]
+                    }
+                ]
+            },
+            22: { // New Zealand
+                title: "New Zealand",
+                subtopics: [
+                    {
+                        title: "Geography & Places of Interest",
+                        questions: [
+                            "What are the two main islands of New Zealand called?",
+                            "Describe New Zealand's geography. What is it famous for? (e.g., mountains, fjords, volcanoes)",
+                            "What are some famous locations in New Zealand, perhaps from films like 'The Lord of the Rings'?",
+                            "What is the capital city of New Zealand, and what is its largest city?"
+                        ]
+                    },
+                    {
+                        title: "Political System",
+                        questions: [
+                            "What type of government does New Zealand have?",
+                            "Who is New Zealand's head of state?",
+                            "How is New Zealand's political system influenced by the British system?",
+                            "What do you know about the political representation of the Māori people in New Zealand?"
+                        ]
+                    },
+                    {
+                        title: "History",
+                        questions: [
+                            "Who are the Māori, the indigenous Polynesian people of New Zealand?",
+                            "What is the Treaty of Waitangi and why is it so important in New Zealand's history?",
+                            "When did New Zealand become a British colony?",
+                            "What was New Zealand's role in major world events like World War I and II?"
+                        ]
+                    },
+                    {
+                        title: "What Makes It Unique?",
+                        questions: [
+                            "What is the kiwi, and why is it a national symbol of New Zealand?",
+                            "What do you know about Māori culture, such as the haka or traditional tattoos (tā moko)?",
+                            "New Zealand is famous for extreme sports. Can you name any?",
+                            "What aspects of New Zealand's culture or landscape do you find most interesting?"
+                        ]
+                    }
+                ]
+            },
+            23: { // The Czech Republic
+                title: "The Czech Republic",
+                subtopics: [
+                    {
+                        title: "Geography & Places of Interest",
+                        questions: [
+                            "Can you describe the geography of the Czech Republic? What are its main mountain ranges and rivers?",
+                            "What are some UNESCO World Heritage sites in the Czech Republic?",
+                            "Besides Prague, what other Czech cities are famous and what are they known for? (e.g., Český Krumlov, Kutná Hora, Brno)",
+                            "What is your favourite place in the Czech Republic and why would you recommend it to a tourist?"
+                        ]
+                    },
+                    {
+                        title: "Political System",
+                        questions: [
+                            "What type of government does the Czech Republic have?",
+                            "Who is the current head of state and head of government?",
+                            "What are the two chambers of the Czech Parliament?",
+                            "When was the Czech Republic founded as an independent state?"
+                        ]
+                    },
+                    {
+                        title: "History",
+                        questions: [
+                            "Can you mention some of the most important figures in Czech history? (e.g., Charles IV, Jan Hus, Václav Havel)",
+                            "What do you know about the Kingdom of Bohemia?",
+                            "Talk about a significant event from 20th-century Czech history, like the founding of Czechoslovakia, the Prague Spring, or the Velvet Revolution.",
+                            "How has the history of the Czech Republic shaped its culture and national identity?"
+                        ]
+                    },
+                    {
+                        title: "What Makes It Unique?",
+                        questions: [
+                            "What are some famous symbols of the Czech Republic?",
+                            "What aspects of Czech culture are well-known internationally (e.g., music, beer, glass)?",
+                            "What stereotypes are associated with Czech people?",
+                            "What do you think makes the Czech Republic a unique country in Europe?"
+                        ]
+                    }
+                ]
+            },
+            // Placeholder for remaining topics
+            ...Array.from({ length: 1 }, (_, i) => i + 24).reduce((acc, i) => {
+                acc[i] = {
+                    title: topics[i],
+                    subtopics: [
+                        {
+                            title: "Content Overview",
+                            questions: [`Practice questions for ${topics[i]} are coming soon.`]
+                        }
+                    ]
+                };
+                return acc;
+            }, {})
         };
 
+        // --- HELPER FUNCTIONS ---
 
-        // --- UI ELEMENT CREATORS ---
+        const createTopicHeader = (title) => {
+            const header = document.createElement('div');
+            header.className = 'mb-8 pb-4 border-b border-slate-300';
+            header.innerHTML = `<h1 class="text-4xl font-bold text-slate-800 tracking-tight">${title}</h1>`;
+            return header;
+        };
 
-        /**
-         * Creates a navigation link for the sidebar.
-         * @param {string} text The text content of the link.
-         * @param {string} icon The emoji icon for the link.
-         * @param {number} index The index of the topic.
-         * @returns {HTMLElement} The created list item element.
-         */
-        function createNavLink(text, icon, index) {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.href = '#';
-            a.className = 'flex items-center space-x-4 p-3 rounded-lg text-slate-600 hover:bg-sky-100 hover:text-sky-700 transition-colors duration-200';
-            a.dataset.topicIndex = index;
-            a.innerHTML = `
-                <span class="text-2xl">${icon}</span>
-                <span class="font-medium">${text}</span>
-            `;
-            li.appendChild(a);
-            return li;
-        }
-
-        /**
-         * Creates the header for the main content area.
-         * @param {string} title The title of the topic.
-         * @returns {HTMLElement} The created div element.
-         */
-        function createTopicHeader(title) {
-            const headerDiv = document.createElement('div');
-            headerDiv.className = 'pb-6 border-b border-slate-200 mb-8';
-            headerDiv.innerHTML = `<h2 class="text-3xl md:text-4xl font-bold text-slate-800">${title}</h2>`;
-            return headerDiv;
-        }
-        
-        /**
-         * Creates a card for a subtopic with its questions.
-         * @param {string} title The title of the subtopic.
-         * @param {string[]} questions An array of question strings.
-         * @param {string|null} imageUrl An optional URL for an image.
-         * @returns {HTMLElement} The created div element.
-         */
-        function createSubtopicCard(title, questions, imageUrl = null) {
+        const createSubtopicCard = (subtopic) => {
             const card = document.createElement('div');
-            const gradients = [
-                'from-sky-50 to-cyan-50', 'from-amber-50 to-yellow-50', 
-                'from-emerald-50 to-green-50', 'from-violet-50 to-purple-50',
-                'from-rose-50 to-pink-50'
-            ];
-            const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
-
-            card.className = `p-6 rounded-lg shadow-md bg-gradient-to-br ${randomGradient} border-t-4 border-sky-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl`;
+            const hasImage = subtopic.imageUrl;
+            const gridClass = hasImage ? 'md:grid md:grid-cols-2 md:gap-8 items-center' : '';
+            card.className = `bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]`;
             
-            let contentHTML = '';
+            const questionList = subtopic.questions.map(q => `<li class="flex items-start"><span class="text-sky-500 mr-3 mt-1">▶</span>${q}</li>`).join('');
 
-            if (imageUrl) {
-                contentHTML = `
-                    <div class="flex flex-col md:flex-row items-start md:space-x-6">
-                        <div class="flex-1">
-                            <h3 class="text-xl md:text-2xl font-semibold text-slate-800 mb-4">${title}</h3>
-                            <ul class="list-disc list-inside space-y-3 text-slate-600">
-                                ${questions.map(q => `<li>${q}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <div class="w-full md:w-1/3 mt-4 md:mt-0 flex-shrink-0">
-                            <img src="${imageUrl}" alt="${title}" class="rounded-lg shadow-md object-cover w-full h-auto">
-                        </div>
+            card.innerHTML = `
+                <div class="${gridClass}">
+                    <div>
+                        <h3 class="text-xl font-semibold text-sky-800 mb-4">${subtopic.title}</h3>
+                        <ul class="space-y-2 text-slate-600">${questionList}</ul>
                     </div>
-                `;
-            } else {
-                 contentHTML = `
-                    <h3 class="text-xl md:text-2xl font-semibold text-slate-800 mb-4">${title}</h3>
-                    <ul class="list-disc list-inside space-y-3 text-slate-600">
-                        ${questions.map(q => `<li>${q}</li>`).join('')}
-                    </ul>
-                `;
-            }
-            card.innerHTML = contentHTML;
+                    ${hasImage ? `<div class="mt-4 md:mt-0"><img src="${subtopic.imageUrl}" alt="${subtopic.title}" class="rounded-lg shadow-sm w-full h-auto object-cover"></div>` : ''}
+                </div>
+            `;
             return card;
-        }
-
-        /**
-         * Creates the interactive worksheet box for the Holidays topic.
-         * @returns {HTMLElement} The created div element.
-         */
-        function createWorksheetBox() {
-            const box = document.createElement('div');
-            box.className = 'mt-12 p-6 rounded-lg shadow-md bg-gradient-to-br from-cyan-50 to-sky-100 border-t-4 border-cyan-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl';
-
-            const title = document.createElement('h3');
-            title.className = 'text-xl md:text-2xl font-semibold text-slate-800 mb-4';
-            title.textContent = 'Interactive Activity: Easter Traditions';
-            box.appendChild(title);
-            
-            const text = document.createElement('p');
-            text.className = 'text-slate-600 leading-relaxed';
-            
-            const questions = [
-                { id: 'q1', options: ['like', '-', 'so'], answer: '-' },
-                { id: 'q2', options: ['why', 'which', 'what'], answer: 'which' },
-                { id: 'q3', options: ['serve', 'to serve', 'have served'], answer: 'serve' },
-                { id: 'q4', options: ['That', 'There', 'It'], answer: 'It' },
-                { id: 'q5', options: ['other', 'strange', 'different'], answer: 'different' },
-                { id: 'q6', options: ['put', 'covered', 'placed'], answer: 'covered' },
-                { id: 'q7', options: ['so', 'too', 'also'], answer: 'also' },
-                { id: 'q8', options: ['sold', 'sell', 'selling'], answer: 'sold' },
-                { id: 'q9', options: ['all', 'them', 'themselves'], answer: 'them' },
-                { id: 'q10', options: ['a', 'the', '-'], answer: 'a' },
-                { id: 'q11', options: ['-', 'much', 'most'], answer: 'most' },
-                { id: 'q12', options: ['become', 'receive', 'pass'], answer: 'receive' },
-                { id: 'q13', options: ['are distributed', 'distributed', 'distribute'], answer: 'are distributed' },
-            ];
-
-            text.innerHTML = `
-                In the UK, Easter is one of the major Christian festivals of the year and just (1) ${createSelect('q1', questions[0].options)} Christmas day, it is also associated with special food.
-                A traditional item is the pancake. People eat pancakes on Shrove Tuesday, (2) ${createSelect('q2', questions[1].options)} is the day before the start of Lent. Sometimes people (3) ${createSelect('q3', questions[2].options)} roast lamb or ham for the traditional lunch on Easter Sunday. (4) ${createSelect('q4', questions[3].options)} is traditional to serve mint sauce with the roast lamb.
-                Simnel cake, not too (5) ${createSelect('q5', questions[4].options)} from traditional Christmas cake, is usually eaten on Easter Sunday. Simnel cake is a rich fruit cake (6) ${createSelect('q6', questions[5].options)} with a layer of marzipan. Hot cross buns are (7) ${createSelect('q7', questions[6].options)} served on Easter Sunday but in the UK they are now (8) ${createSelect('q8', questions[7].options)} all year round. Traditional Easter cross buns are small, sweet buns with dried fruit. People serve (9) ${createSelect('q9', questions[8].options)} hot. The bun has (10) ${createSelect('q10', questions[9].options)} cross on the top.
-                Chocolate eggs are perhaps the (11) ${createSelect('q11', questions[10].options)} famous Easter food. Children (12) ${createSelect('q12', questions[11].options)} chocolate eggs from their parents and grandparents on Easter Sunday. Children believe that the eggs (13) ${createSelect('q13', questions[12].options)} by the Easter Bunny on the morning of Easter Sunday. Chocolate bunnies are becoming a popular alternative to chocolate eggs.
-            `;
-            box.appendChild(text);
-
-            const button = document.createElement('button');
-            button.className = 'mt-6 bg-cyan-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors';
-            button.textContent = 'Check Answers';
-            box.appendChild(button);
-
-            const resultDiv = document.createElement('div');
-            resultDiv.className = 'mt-4 font-medium';
-            box.appendChild(resultDiv);
-
-            button.addEventListener('click', () => {
-                let correctCount = 0;
-                questions.forEach(q => {
-                    const select = box.querySelector(`#${q.id}`);
-                    select.classList.remove('border-green-500', 'border-red-500', 'border-slate-300');
-                    if (select.value === q.answer) {
-                        select.classList.add('border-green-500');
-                        correctCount++;
-                    } else {
-                        select.classList.add('border-red-500');
-                    }
-                });
-                 resultDiv.textContent = `You got ${correctCount} out of ${questions.length} correct.`;
-                 resultDiv.className = correctCount > questions.length / 2 ? 'mt-4 font-medium text-green-700' : 'mt-4 font-medium text-red-700';
-            });
-
-            return box;
-        }
-
-        function createSelect(id, options) {
-            let optionsHTML = options.map(opt => `<option value="${opt}">${opt}</option>`).join('');
-            return `<select id="${id}" class="inline-block border border-slate-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500 text-sm px-2 py-1 mx-1">${optionsHTML}</select>`;
-        }
+        };
         
-        /**
-         * Creates the "Extra Resources" box for the Holidays topic.
-         * @returns {HTMLElement} The created div element.
-         */
-        function createHolidayResourcesBox() {
+        const createInteractiveQuiz = (quizData) => {
             const box = document.createElement('div');
-            box.className = 'mt-12 p-6 rounded-lg shadow-md bg-gradient-to-br from-amber-50 to-yellow-100 border-t-4 border-amber-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl';
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
             
-            const title = document.createElement('h3');
-            title.className = 'text-xl md:text-2xl font-semibold text-slate-800 mb-4';
-            title.textContent = 'Extra Resources';
-            box.appendChild(title);
+            const sentenceHtml = quizData.sentences.map((sentence, index) => {
+                const options = quizData.options[index].map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
+                const select = `<select id="q-${quizData.id}-${index}" class="border-b-2 border-sky-400 bg-transparent focus:outline-none focus:border-sky-600 transition-colors mx-1">${options}</select>`;
+                return `<p class="mb-2">${index + 1}. ${sentence.replace(`{${index}}`, select)}</p>`;
+            }).join('');
 
-            const linksContainer = document.createElement('div');
-            linksContainer.className = 'space-y-3';
-            
-            const link1 = document.createElement('a');
-            link1.href = 'https://drive.google.com/file/d/1xENF6yEiF_sk0u_gkY1G1T8PL8asRLBl/view?usp=drive_link';
-            link1.target = '_blank';
-            link1.rel = 'noopener noreferrer';
-            link1.className = 'flex items-center space-x-2 text-amber-600 hover:text-amber-800 font-medium group';
-            link1.innerHTML = `
-                <span class="group-hover:underline">Holiday Customs Worksheet</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+            box.innerHTML = `
+                <h3 class="text-xl font-semibold text-sky-800 mb-4">${quizData.title}</h3>
+                <div id="${quizData.id}" class="space-y-3 text-slate-700">${sentenceHtml}</div>
+                <button id="check-${quizData.id}" class="mt-4 bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">Check Answers</button>
+                <div id="results-${quizData.id}" class="mt-4"></div>
             `;
-            linksContainer.appendChild(link1);
-
-            const link2 = document.createElement('a');
-            link2.href = 'https://drive.google.com/file/d/1aGbhLRCJLabiv_5Las7WIdeo9e8kkk7T/view?usp=sharing';
-            link2.target = '_blank';
-            link2.rel = 'noopener noreferrer';
-            link2.className = 'flex items-center space-x-2 text-amber-600 hover:text-amber-800 font-medium group';
-            link2.innerHTML = `
-                <span class="group-hover:underline">Holidays and celebrations Z level</span>
-                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-            `;
-            linksContainer.appendChild(link2);
-
-            const link3 = document.createElement('a');
-            link3.href = 'https://docs.google.com/presentation/d/1hISUDe4HI1if4EB-LK7_n-b-TcqdbcMYTR_Bac4nQuM/edit?usp=sharing';
-            link3.target = '_blank';
-            link3.rel = 'noopener noreferrer';
-            link3.className = 'flex items-center space-x-2 text-amber-600 hover:text-amber-800 font-medium group';
-            link3.innerHTML = `
-                <span class="group-hover:underline">Holidays Presentation</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-            `;
-            linksContainer.appendChild(link3);
-
-            box.appendChild(linksContainer);
-            return box;
-        }
-
-        /**
-         * Creates the "Extra Resources" box for the Food topic.
-         * @returns {HTMLElement} The created div (box) element.
-         */
-        function createFoodResourcesBox() {
-            const box = document.createElement('div');
-            box.className = 'mt-12 p-6 rounded-lg shadow-md bg-gradient-to-br from-emerald-50 to-green-100 border-t-4 border-emerald-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl';
             
-            const title = document.createElement('h3');
-            title.className = 'text-xl md:text-2xl font-semibold text-slate-800 mb-4';
-            title.textContent = 'Extra Resources';
-            box.appendChild(title);
-
-            const linksContainer = document.createElement('div');
-            linksContainer.className = 'space-y-3';
-            
-            const link = document.createElement('a');
-            link.href = 'https://drive.google.com/file/d/1-XFrOzkUhY5jxV0UfvfHwh_UVyoqCVfS/view?usp=sharing';
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.className = 'flex items-center space-x-2 text-emerald-600 hover:text-emerald-800 font-medium group';
-            link.innerHTML = `
-                <span class="group-hover:underline">Food in English Speaking Countries Z level</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-            `;
-            linksContainer.appendChild(link);
-
-            const newLink = document.createElement('a');
-            newLink.href = 'https://drive.google.com/file/d/1sDTGhcG-PEbAGNVu8I2YDe014DneVqrs/view?usp=sharing';
-            newLink.target = '_blank';
-            newLink.rel = 'noopener noreferrer';
-            newLink.className = 'flex items-center space-x-2 text-emerald-600 hover:text-emerald-800 font-medium group';
-            newLink.innerHTML = `
-                <span class="group-hover:underline">Food worksheet</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-            `;
-            linksContainer.appendChild(newLink);
-            
-            const link3 = document.createElement('a');
-            link3.href = 'https://docs.google.com/presentation/d/1B12kaQOhwFfRB--AupUarcJ9zLsHC43QEJstLPjy74U/edit?usp=sharing';
-            link3.target = '_blank';
-            link3.rel = 'noopener noreferrer';
-            link3.className = 'flex items-center space-x-2 text-emerald-600 hover:text-emerald-800 font-medium group';
-            link3.innerHTML = `
-                <span class="group-hover:underline">Food in Gt Britain</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-            `;
-            linksContainer.appendChild(link3);
-
-            box.appendChild(linksContainer);
-            return box;
-        }
-
-        /**
-         * Creates the "General Food Discussion" box.
-         * @returns {HTMLElement} The created div (box) element.
-         */
-        function createFoodDiscussionBox() {
-            const box = document.createElement('div');
-            box.className = 'mt-12 p-6 rounded-lg shadow-md bg-gradient-to-br from-sky-50 to-sky-100 border-t-4 border-sky-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl';
-
-            const title = document.createElement('h3');
-            title.className = 'text-xl md:text-2xl font-semibold text-slate-800 mb-4';
-            title.textContent = 'General Food Discussion';
-            box.appendChild(title);
-
-            const questionList = document.createElement('ul');
-            questionList.className = 'list-disc list-inside space-y-3 text-slate-600';
-
-            const questions = [
-                "What Restaurant Would You Most Like to Review?",
-                "What Messages About Food and Eating Have You Learned From Your Family?",
-                "What Would You Most Like to Learn to Cook or Bake?",
-                "Do You Pay Attention to Nutrition Labels on Food?",
-                "What Food Would You Like to Judge in a Taste-Off?",
-                "What Are the Most Memorable Meals You’ve Ever Had?",
-                "Do You Think a Healthier School Lunch Program Is a Lost Cause?",
-                "Do You Prefer Your Tacos ‘Authentic’ or ‘Appropriated’?",
-                "Is It Ethical to Eat Meat?",
-                "What’s Your Comfort Food?",
-                "What Are Your Favorite Junk Foods?",
-                "What Do You Eat During the School Day?",
-                "Do You Cook?",
-                "How Concerned are You About Where Your Food Comes From?",
-                "What Are Your Food Rules?",
-                "Are Your Eating Habits Healthy?",
-                "Do You Eat Cafeteria Food?",
-                "What’s Your Favorite Summer Food?",
-                "Are You Caffeinated?"
-            ];
-
-            questions.forEach(q => {
-                const li = document.createElement('li');
-                li.textContent = q;
-                questionList.appendChild(li);
-            });
-
-            box.appendChild(questionList);
-            return box;
-        }
-        
-        /**
-         * Creates the interactive activity for the Food topic.
-         * @returns {HTMLElement} The created div element.
-         */
-        function createEatingDisorderActivity() {
-            const box = document.createElement('div');
-            box.className = 'mt-12 p-6 rounded-lg shadow-md bg-gradient-to-br from-rose-50 to-pink-100 border-t-4 border-rose-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl';
-            
-            const title = document.createElement('h3');
-            title.className = 'text-xl md:text-2xl font-semibold text-slate-800 mb-4';
-            title.textContent = 'Interactive Activity: Eating Disorders';
-            box.appendChild(title);
-
-            const wordBank = ['binge', 'westernization', 'anorexia', 'purging', 'abnormal', 'self-starvation', 'insufficient', 'physical', 'laxatives'];
-            const questions = [
-                { text: 'Eating disorders are conditions defined by ___ eating habits.', answer: 'abnormal' },
-                { text: 'They may involve either ___ or excessive food intake.', answer: 'insufficient' },
-                { text: 'They have effect on both the ___ and mental health of an individual.', answer: 'physical' },
-                { text: 'Bulimia and ___ are the most common specific forms in the United Kingdom.', answer: 'anorexia' },
-                { text: 'Other types include ___ eating and eating disorder not otherwise specified.', answer: 'binge' },
-                { text: 'Bulimia is characterized by binge eating and ___. Purging can include self-induced vomiting, over-exercising, and the usage of diuretics and ___.', answers: ['purging', 'laxatives'] },
-                { text: 'Anorexia is characterized by extreme food restriction to the point of ___ and excessive weight loss.', answer: 'self-starvation' },
-                { text: 'Though primarily thought of as affecting females, eating disorders affect males as well (an estimated 10 – 15% of people with eating disorders are males).', answer: null },
-                { text: 'Although eating disorders are increasing all over the world among both men and women, there is evidence to suggest that it is women in the Western world who are at the highest risk of developing them and the degree of ___ increases the risk.', answer: 'westernization' },
-                { text: 'Nearly half of all Americans personally know someone with an eating disorder.', answer: null },
-            ];
-
-            const form = document.createElement('form');
-            form.className = 'space-y-4';
-            
-            let selectCounter = 0;
-            questions.forEach((q, index) => {
-                const p = document.createElement('p');
-                p.className = 'text-slate-600 leading-relaxed';
-                
-                let processedText = `${index + 1}. ${q.text}`;
-                
-                if (q.answer) {
-                    processedText = processedText.replace('___', createFoodSelect(`food_q${selectCounter++}`, wordBank));
-                } else if (q.answers) {
-                     q.answers.forEach(() => {
-                        processedText = processedText.replace('___', createFoodSelect(`food_q${selectCounter++}`, wordBank));
+            setTimeout(() => {
+                document.getElementById(`check-${quizData.id}`).addEventListener('click', () => {
+                    let score = 0;
+                    const resultsContainer = document.getElementById(`results-${quizData.id}`);
+                    quizData.answers.forEach((answer, index) => {
+                        const select = document.getElementById(`q-${quizData.id}-${index}`);
+                        if (parseInt(select.value) === answer) {
+                            score++;
+                            select.classList.remove('border-red-500');
+                            select.classList.add('border-green-500');
+                        } else {
+                            select.classList.remove('border-green-500');
+                            select.classList.add('border-red-500');
+                        }
                     });
-                }
-
-                p.innerHTML = processedText;
-                form.appendChild(p);
-            });
-
-            box.appendChild(form);
-            
-            const button = document.createElement('button');
-            button.className = 'mt-6 bg-rose-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-rose-600 transition-colors';
-            button.textContent = 'Check Answers';
-            box.appendChild(button);
-
-            const resultDiv = document.createElement('div');
-            resultDiv.className = 'mt-4 font-medium';
-            box.appendChild(resultDiv);
-            
-            const correctAnswers = ['abnormal', 'insufficient', 'physical', 'anorexia', 'binge', 'purging', 'laxatives', 'self-starvation', 'westernization'];
-
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                let correctCount = 0;
-                const selects = form.querySelectorAll('select');
-                
-                selects.forEach((select, index) => {
-                    select.classList.remove('border-green-500', 'border-red-500', 'border-slate-300');
-                    if (select.value === correctAnswers[index]) {
-                        select.classList.add('border-green-500');
-                        correctCount++;
-                    } else {
-                        select.classList.add('border-red-500');
-                    }
+                    resultsContainer.innerHTML = `<p class="font-semibold">You scored ${score} out of ${quizData.answers.length}.</p>`;
                 });
-                 resultDiv.textContent = `You got ${correctCount} out of ${correctAnswers.length} correct.`;
-                 resultDiv.className = correctCount > correctAnswers.length / 2 ? 'mt-4 font-medium text-green-700' : 'mt-4 font-medium text-red-700';
-            });
+            }, 0);
 
             return box;
-        }
+        };
+
+        const createWorksheetBox = () => {
+             const quizData = {
+                title: "Interactive Activity: Easter Traditions",
+                id: "easter-quiz",
+                sentences: [
+                    "In the UK, Easter is one of the major Christian festivals of the year and just {0} Christmas day, it is also associated with special food.",
+                    "A traditional item is the pancake. People eat pancakes on Shrove Tuesday, {1} is the day before the start of Lent.",
+                    "Sometimes people {2} roast lamb or ham for the traditional lunch on Easter Sunday.",
+                    "{3} is traditional to serve mint sauce with the roast lamb.",
+                    "Simnel cake, not too {4} from traditional Christmas cake, is usually eaten on Easter Sunday.",
+                    "Simnel cake is a rich fruit cake {5} with a layer of marzipan.",
+                    "Hot cross buns are {6} served on Easter Sunday but in the UK they are now {7} all year round.",
+                    "Traditional Easter cross buns are small, sweet buns with dried fruit. People serve {8} hot.",
+                    "The bun has {9} cross on the top.",
+                    "Chocolate eggs are perhaps the {10} famous Easter food.",
+                    "Children {11} chocolate eggs from their parents and grandparents on Easter Sunday.",
+                    "Children believe that the eggs {12} by the Easter Bunny on the morning of Easter Sunday.",
+                    "Chocolate bunnies are becoming a popular alternative to chocolate eggs."
+                ],
+                options: [
+                    ["like", "-", "so"],
+                    ["why", "which", "what"],
+                    ["serve", "to serve", "have served"],
+                    ["That", "There", "It"],
+                    ["other", "strange", "different"],
+                    ["put", "covered", "placed"],
+                    ["so", "too", "also"],
+                    ["sold", "sell", "selling"],
+                    ["they", "them", "themselves"],
+                    ["a", "the", "-"],
+                    ["-", "much", "most"],
+                    ["become", "receive", "pass"],
+                    ["are distributed", "distributed", "distribute"]
+                ],
+                answers: [0, 1, 0, 2, 2, 1, 2, 0, 1, 0, 2, 1, 0]
+            };
+            return createInteractiveQuiz(quizData);
+        };
+
+        const createEatingDisorderQuiz = () => {
+            const quizData = {
+                title: "Interactive Activity: Eating Disorders",
+                id: "eating-disorder-quiz",
+                sentences: [
+                    "Eating disorders are conditions defined by {0} eating habits.",
+                    "They may involve either {1} or excessive food intake.",
+                    "They have effect on both the {2} and mental health of an individual.",
+                    "Bulimia and {3} are the most common specific forms in the United Kingdom.",
+                    "Other types include {4} eating and eating disorder not otherwise specified.",
+                    "Bulimia is characterized by binge eating and {5}. Purging can include self-induce vomiting, over-exercising, and the usage of diuretics and {6}.",
+                    "Anorexia is characterized by extreme food restriction to the point of {7} and excessive weight loss.",
+                    "Though primarily thought of as affecting females, eating disorders affect males as well (an estimated 10 – 15% of people with eating disorders are males).",
+                    "Although eating disorders are increasing all over the world among both men and women, there is evidence to suggest that it is women in the Western world who are at the highest risk of developing them and the degree of {8} increases the risk.",
+                    "Nearly half of all Americans personally know someone with an eating disorder."
+                ],
+                wordBank: ["abnormal", "insufficient", "physical", "anorexia", "binge", "purging", "laxatives", "self-starvation", "westernization"],
+                answers: ["abnormal", "insufficient", "physical", "anorexia", "binge", "purging", "laxatives", "self-starvation", "westernization"]
+            };
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+
+            const sentenceHtml = quizData.sentences.map((s, i) => {
+                let sentence = s;
+                let count = (sentence.match(/{/g) || []).length;
+                let htmlSentence = sentence;
+                
+                if (count > 0) {
+                     // Manually handle sentence 6 with two blanks
+                    if (i === 5) {
+                         const options = quizData.wordBank.map(word => `<option value="${word}">${word}</option>`).join('');
+                         const select1 = `<select id="q-${quizData.id}-5" class="border-b-2 border-sky-400 bg-transparent focus:outline-none focus:border-sky-600 transition-colors mx-1"><option value="">...</option>${options}</select>`;
+                         const select2 = `<select id="q-${quizData.id}-6" class="border-b-2 border-sky-400 bg-transparent focus:outline-none focus:border-sky-600 transition-colors mx-1"><option value="">...</option>${options}</select>`;
+                         htmlSentence = htmlSentence.replace('{5}', select1).replace('{6}', select2);
+                    } else {
+                         const options = quizData.wordBank.map(word => `<option value="${word}">${word}</option>`).join('');
+                         const select = `<select id="q-${quizData.id}-${i}" class="border-b-2 border-sky-400 bg-transparent focus:outline-none focus:border-sky-600 transition-colors mx-1"><option value="">...</option>${options}</select>`;
+                         htmlSentence = htmlSentence.replace(`{${i}}`, select);
+                    }
+                    return `<p class="mb-2">${i + 1}. ${htmlSentence}</p>`;
+                } else {
+                    return `<p class="mb-2 text-slate-500">${i + 1}. ${sentence}</p>`;
+                }
+            }).join('');
+
+            box.innerHTML = `
+                <h3 class="text-xl font-semibold text-sky-800 mb-4">${quizData.title}</h3>
+                <div id="${quizData.id}" class="space-y-3 text-slate-700">${sentenceHtml}</div>
+                <button id="check-${quizData.id}" class="mt-4 bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">Check Answers</button>
+                <div id="results-${quizData.id}" class="mt-4"></div>
+            `;
+
+            setTimeout(() => {
+                document.getElementById(`check-${quizData.id}`).addEventListener('click', () => {
+                    let score = 0;
+                    const resultsContainer = document.getElementById(`results-${quizData.id}`);
+                    const totalQuestions = 9; // 9 blanks in total
+                    for (let i = 0; i <= 8; i++) {
+                         const select = document.getElementById(`q-${quizData.id}-${i}`);
+                         if (select) {
+                             if (select.value.toLowerCase() === quizData.answers[i].toLowerCase()) {
+                                 score++;
+                                 select.classList.remove('border-red-500');
+                                 select.classList.add('border-green-500');
+                             } else {
+                                 select.classList.remove('border-green-500');
+                                 select.classList.add('border-red-500');
+                             }
+                         }
+                    }
+                    resultsContainer.innerHTML = `<p class="font-semibold">You scored ${score} out of ${totalQuestions}.</p>`;
+                });
+            }, 0);
+
+            return box;
+        };
+
+        const createDiscussionBox = (discussionData) => {
+             const box = document.createElement('div');
+             box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+             const questionList = discussionData.questions.map(q => `<li class="flex items-start"><span class="text-sky-500 mr-3 mt-1">▶</span>${q}</li>`).join('');
+             box.innerHTML = `
+                <h3 class="text-xl font-semibold text-sky-800 mb-4">${discussionData.title}</h3>
+                <ul class="space-y-2 text-slate-600">${questionList}</ul>
+             `;
+             return box;
+        };
+
+        const createResourceBox = (resourceData) => {
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            const linkList = resourceData.links.map(link => `<li><a href="${link.url}" target="_blank" class="text-sky-600 hover:text-sky-800 hover:underline font-medium transition-colors">${link.text}</a></li>`).join('');
+            box.innerHTML = `
+                <h3 class="text-xl font-semibold text-sky-800 mb-4">${resourceData.title}</h3>
+                <ul class="space-y-2">${linkList}</ul>
+            `;
+            return box;
+        };
         
-        function createFoodSelect(id, options) {
-            let optionsHTML = '<option value="">Select...</option>' + options.map(opt => `<option value="${opt}">${opt}</option>`).join('');
-            return `<select id="${id}" class="inline-block border border-slate-300 rounded-md shadow-sm focus:ring-rose-500 focus:border-rose-500 text-sm px-2 py-1 mx-1">${optionsHTML}</select>`;
-        }
+        // --- MAIN LOGIC ---
 
+        const displayTopic = (topicId) => {
+            const content = topicData[topicId];
+            if (!content) return;
 
-        // --- CORE LOGIC ---
+            const topicContent = document.getElementById('topic-content');
+            topicContent.innerHTML = ''; // Clear previous content
 
-        /**
-         * Main display function. Clears content and renders the selected topic.
-         * @param {number} topicIndex The index of the topic to display.
-         */
-        function displayTopic(topicIndex) {
-            const topic = topicData[topicIndex] || { title: topics[topicIndex], subtopics: [] };
-            const topicContentEl = document.getElementById('topic-content');
-            
-            // Clear previous content
-            topicContentEl.innerHTML = '';
-            
-            // Add new content
-            topicContentEl.appendChild(createTopicHeader(topic.title));
-            
-            const contentGrid = document.createElement('div');
-            contentGrid.className = 'space-y-8';
-            
-            topic.subtopics.forEach(sub => {
-                contentGrid.appendChild(createSubtopicCard(sub.title, sub.questions, sub.imageUrl));
+            topicContent.appendChild(createTopicHeader(content.title));
+
+            content.subtopics.forEach(subtopic => {
+                topicContent.appendChild(createSubtopicCard(subtopic));
             });
             
-            topicContentEl.appendChild(contentGrid);
-
-            // Add special boxes for specific topics
-            if (topicIndex === 0) {
-                const worksheetBox = createWorksheetBox();
-                contentGrid.appendChild(worksheetBox);
-
-                const holidayResourcesBox = createHolidayResourcesBox();
-                contentGrid.appendChild(holidayResourcesBox);
-
-            } else if (topicIndex === 1) {
-                const eatingDisorderActivity = createEatingDisorderActivity();
-                contentGrid.appendChild(eatingDisorderActivity);
-
-                const foodDiscussionBox = createFoodDiscussionBox();
-                contentGrid.appendChild(foodDiscussionBox);
-                
-                const foodResourcesBox = createFoodResourcesBox();
-                contentGrid.appendChild(foodResourcesBox);
+            // Special content for Holidays (Topic 0)
+            if (topicId == 0) {
+                topicContent.appendChild(createWorksheetBox());
+                const resourceData = {
+                    title: "Extra Resources",
+                    links: [
+                        { url: "https://drive.google.com/file/d/1xENF6yEiF_sk0u_gkY1G1T8PL8asRLBl/view?usp=drive_link", text: "Holiday Customs Worksheet" },
+                        { url: "https://drive.google.com/file/d/1aGbhLRCJLabiv_5Las7WIdeo9e8kkk7T/view?usp=sharing", text: "Holidays and celebrations Z level" },
+                        { url: "https://docs.google.com/presentation/d/1hISUDe4HI1if4EB-LK7_n-b-TcqdbcMYTR_Bac4nQuM/edit?usp=sharing", text: "Holidays Presentation"}
+                    ]
+                };
+                topicContent.appendChild(createResourceBox(resourceData));
             }
 
-            updateActiveLink(topicIndex);
+            // Special content for Food (Topic 1)
+             if (topicId == 1) {
+                topicContent.appendChild(createEatingDisorderQuiz());
 
-            // Scroll to top of content on topic change for better UX
-            window.scrollTo(0, 0);
-        }
+                const discussionData = {
+                    title: "General Food Discussion",
+                    questions: [
+                        "What Restaurant Would You Most Like to Review?", "What Messages About Food and Eating Have You Learned From Your Family?", "What Would You Most Like to Learn to Cook or Bake?", "Do You Pay Attention to Nutrition Labels on Food?", "What Food Would You Like to Judge in a Taste-Off?", "What Are the Most Memorable Meals You’ve Ever Had?", "Do You Think a Healthier School Lunch Program Is a Lost Cause?", "Do you Prefer Your Tacos ‘Authentic’ or ‘Appropriated’?", "Is It Ethical to Eat Meat?", "What’s Your Comfort Food?", "What Are Your Favorite Junk Foods?", "What Do You Eat During the School Day?", "Do You Cook?", "How Concerned are You About Where Your Food Comes From?", "What Are Your Food Rules?", "Are Your Eating Habits Healthy?", "Do You Eat Cafeteria Food?", "What’s Your Favorite Summer Food?", "Are You Caffeinated?"
+                    ]
+                };
+                topicContent.appendChild(createDiscussionBox(discussionData));
 
-        /**
-         * Updates the active state of the sidebar links.
-         * @param {number} activeIndex The index of the currently active topic.
-         */
-        function updateActiveLink(activeIndex) {
-            document.querySelectorAll('#topic-list a').forEach((link, index) => {
-                if (index === activeIndex) {
-                    link.classList.add('bg-sky-100', 'text-sky-700');
-                    link.classList.remove('text-slate-600');
-                } else {
-                    link.classList.remove('bg-sky-100', 'text-sky-700');
-                    link.classList.add('text-slate-600');
+                const resourceData = {
+                    title: "Extra Resources",
+                    links: [
+                        { url: "https://drive.google.com/file/d/1-XFrOzkUhY5jxV0UfvfHwh_UVyoqCVfS/view?usp=sharing", text: "Food in English Speaking Countries Z level" },
+                        { url: "https://drive.google.com/file/d/1sDTGhcG-PEbAGNVu8I2YDe014DneVqrs/view?usp=sharing", text: "Food worksheet" },
+                        { url: "https://docs.google.com/presentation/d/1B12kaQOhwFfRB--AupUarcJ9zLsHC43QEJstLPjy74U/edit?usp=sharing", text: "Food in Gt Britain"}
+                    ]
+                };
+                topicContent.appendChild(createResourceBox(resourceData));
+            }
+
+
+            // Update active topic in sidebar
+            document.querySelectorAll('#topic-list li').forEach(li => {
+                li.classList.remove('bg-sky-100', 'text-sky-700', 'font-semibold');
+                if (li.dataset.topicId == topicId) {
+                    li.classList.add('bg-sky-100', 'text-sky-700', 'font-semibold');
                 }
             });
-        }
-        
-        /**
-         * Initializes the application.
-         */
-        function init() {
-            const topicListEl = document.getElementById('topic-list');
+        };
+
+        const init = () => {
+            const topicList = document.getElementById('topic-list');
             const sidebar = document.getElementById('sidebar');
             const menuToggle = document.getElementById('menu-toggle');
 
-            // Populate sidebar
+            // Populate topic list
             topics.forEach((topic, index) => {
-                const navItem = createNavLink(topic, topicIcons[index], index);
-                topicListEl.appendChild(navItem);
-            });
-            
-            // Add event listener to the list container
-            topicListEl.addEventListener('click', (e) => {
-                const link = e.target.closest('a');
-                if (link && link.dataset.topicIndex) {
-                    e.preventDefault();
-                    displayTopic(parseInt(link.dataset.topicIndex));
-                    // Hide sidebar on mobile after click
-                    if(window.innerWidth < 768) {
-                       sidebar.classList.add('-translate-x-full');
+                const li = document.createElement('li');
+                li.dataset.topicId = index;
+                li.className = 'flex items-center p-3 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors';
+                li.innerHTML = `<span class="mr-4 text-xl">${topicIcons[index] || '📝'}</span><span>${topic}</span>`;
+                li.addEventListener('click', () => {
+                    displayTopic(index);
+                    if (window.innerWidth < 768) { // md breakpoint
+                        sidebar.classList.add('-translate-x-full');
                     }
-                }
+                });
+                topicList.appendChild(li);
             });
-            
-            // Toggle sidebar on mobile
+
+            // Mobile menu toggle
             menuToggle.addEventListener('click', () => {
                 sidebar.classList.toggle('-translate-x-full');
             });
-
-            // Display the first topic by default
+            
+            // Display first topic by default
             displayTopic(0);
-        }
+        };
 
-        // --- STARTUP ---
         document.addEventListener('DOMContentLoaded', init);
-
     </script>
-
 </body>
 </html>
+
+
+
 
 
 
