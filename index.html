@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maturita English Speaking Exam Practice</title>
+    <title>English Speaking Exam Practice</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +80,8 @@
                             "What is the origin of St. Wenceslas' Day?",
                             "What traditions are associated with the 17th of November in the Czech Republic?",
                             "How do Czechs typically celebrate Liberation Day (May 8th)?"
-                        ]
+                        ],
+                        imageUrl: "https://johanka2014.github.io/maturita_speaking/wenceslaus.png"
                     },
                     {
                         title: "Holidays in English-Speaking Countries",
@@ -90,7 +91,8 @@
                             "What do you know about 'bank holidays' in the UK?",
                             "Describe the celebrations for Independence Day in the USA.",
                             "What are some unique holidays celebrated in Australia, Canada, or New Zealand?",
-                        ]
+                        ],
+                        imageUrl: "https://johanka2014.github.io/maturita_speaking/thanksgiving.png"
                     },
                     {
                         title: "Christmas and Easter Comparison",
@@ -98,7 +100,8 @@
                             "How do Christmas traditions in the Czech Republic differ from those in the UK or USA?",
                             "What are the similarities and differences in how Easter is celebrated in your country and in English-speaking countries?",
                             "Talk about the commercialization of Christmas and Easter. Is it a problem?",
-                        ]
+                        ],
+                        imageUrl: "https://johanka2014.github.io/maturita_speaking/coke-holiday-packaging-3.jpg"
                     },
                     {
                         title: "Traditions and Personal Preferences",
@@ -106,7 +109,8 @@
                            "Are traditions still kept or are they disappearing in your country? Why?",
                            "What is your favourite holiday and why?",
                            "How do you personally celebrate Christmas or Easter with your family?"
-                        ]
+                        ],
+                        imageUrl: "https://johanka2014.github.io/maturita_speaking/easter_eggs.jpg"
                     },
                     {
                         title: "Special Occasions",
@@ -115,7 +119,8 @@
                             "Which event has been a red-letter day for you or your family?",
                             "What are some common customs for weddings in the Czech Republic?",
                             "How do people celebrate birthdays in your country?"
-                        ]
+                        ],
+                        imageUrl: "https://johanka2014.github.io/maturita_speaking/birthday.png"
                     }
                 ]
             },
@@ -234,9 +239,10 @@
          * Creates a card for a subtopic with its questions.
          * @param {string} title The title of the subtopic.
          * @param {string[]} questions An array of question strings.
+         * @param {string|null} imageUrl An optional URL for an image.
          * @returns {HTMLElement} The created div element.
          */
-        function createSubtopicCard(title, questions) {
+        function createSubtopicCard(title, questions, imageUrl = null) {
             const card = document.createElement('div');
             const gradients = [
                 'from-sky-50 to-cyan-50', 'from-amber-50 to-yellow-50', 
@@ -246,20 +252,32 @@
             const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
 
             card.className = `p-6 rounded-lg shadow-md bg-gradient-to-br ${randomGradient} border-t-4 border-sky-400 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl`;
+            
+            let contentHTML = '';
 
-            const titleEl = document.createElement('h3');
-            titleEl.className = 'text-xl md:text-2xl font-semibold text-slate-800 mb-4';
-            titleEl.textContent = title;
-            card.appendChild(titleEl);
-
-            const ul = document.createElement('ul');
-            ul.className = 'list-disc list-inside space-y-3 text-slate-600';
-            questions.forEach(q => {
-                const li = document.createElement('li');
-                li.textContent = q;
-                ul.appendChild(li);
-            });
-            card.appendChild(ul);
+            if (imageUrl) {
+                contentHTML = `
+                    <div class="flex flex-col md:flex-row items-start md:space-x-6">
+                        <div class="flex-1">
+                            <h3 class="text-xl md:text-2xl font-semibold text-slate-800 mb-4">${title}</h3>
+                            <ul class="list-disc list-inside space-y-3 text-slate-600">
+                                ${questions.map(q => `<li>${q}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/3 mt-4 md:mt-0 flex-shrink-0">
+                            <img src="${imageUrl}" alt="${title}" class="rounded-lg shadow-md object-cover w-full h-auto">
+                        </div>
+                    </div>
+                `;
+            } else {
+                 contentHTML = `
+                    <h3 class="text-xl md:text-2xl font-semibold text-slate-800 mb-4">${title}</h3>
+                    <ul class="list-disc list-inside space-y-3 text-slate-600">
+                        ${questions.map(q => `<li>${q}</li>`).join('')}
+                    </ul>
+                `;
+            }
+            card.innerHTML = contentHTML;
             return card;
         }
 
@@ -611,7 +629,7 @@
             contentGrid.className = 'space-y-8';
             
             topic.subtopics.forEach(sub => {
-                contentGrid.appendChild(createSubtopicCard(sub.title, sub.questions));
+                contentGrid.appendChild(createSubtopicCard(sub.title, sub.questions, sub.imageUrl));
             });
             
             topicContentEl.appendChild(contentGrid);
@@ -700,4 +718,11 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
 
