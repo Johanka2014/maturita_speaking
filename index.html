@@ -59,13 +59,13 @@
             "Culture and Entertainment", "Media, Internet", "Science, Technology", "Shopping, Money", "Health, Keeping Fit",
             "Sports and Games", "Education", "Jobs, My Future Career", "Travelling", "Interpersonal Relationships",
             "Housing", "American Literature", "British Literature", "Canada", "The United Kingdom",
-            "The United States of America", "Australia", "New Zealand", "The Czech Republic", "Kopřivnice"
+            "The United States of America", "Australia", "New Zealand", "The Czech Republic", "Kopřivnice", "Geography and Nature"
         ];
         
         const topicIcons = [
             '🎉', '🍔', '🐾', '🌍', '🌱', '🎭', '💻', '🔬', '🛒', '❤️', 
             '⚽', '🎓', '💼', '✈️', '👨‍👩‍👧‍👦', '🏠', '📚', '📖', '🍁', '👑', 
-            '🦅', '🐨', '🥝', '🏰', '🏭'
+            '🦅', '🐨', '🥝', '🏰', '🏭', '🏞️'
         ];
 
         const topicData = {
@@ -749,6 +749,19 @@
             19: { // The United Kingdom
                 title: "The United Kingdom",
                 subtopics: [
+                    // {
+                    //     title: "General Questions (from Bridge 19)",
+                    //     questions: [
+                    //         "What basic facts do you know about the United Kingdom?",
+                    //         "Can you tell me something more specific about each of the four countries?",
+                    //         "Could you describe some of the United Kingdom's geographical features?",
+                    //         "What are some of the famous places to visit in London?",
+                    //         "Who are some famous people from the United Kingdom?",
+                    //         "What are some foods which you associate with the United Kingdom?",
+                    //         "Could you describe some sports and pastimes popular in the United Kingdom?",
+                    //         "Would you like to go to the United Kingdom? Why?",
+                    //     ]
+                    // },
                     {
                         title: "Geography & Places of Interest",
                         questions: [
@@ -774,6 +787,24 @@
                             "What was the British Empire?",
                             "How did events like the Industrial Revolution or World War II shape modern Britain?",
                             "What is the Commonwealth?"
+                        ]
+                    },
+                    {
+                        title: "Flags of the UK and the Union Jack",
+                        questions: [
+                            `<strong>Individual Flags:</strong><br>
+                             - <strong>England:</strong> St. George's Cross (a red cross on a white background). <br>
+                             - <strong>Scotland:</strong> St. Andrew's Cross or the Saltire (a white diagonal cross on a blue background). <br>
+                             - <strong>Wales:</strong> Y Ddraig Goch (the Red Dragon - features a red dragon passant on a green and white field). It's important to note the Welsh flag is not represented in the Union Jack, as Wales was legally part of the Kingdom of England when the first version was created. <br>
+                             - <strong>Northern Ireland:</strong> Historically represented by St. Patrick's Saltire (a red diagonal cross on a white background), though its official status is complex. Northern Ireland does not currently have its own official unique flag. The St. Patrick's Saltire was incorporated into the Union Jack.<br><br>
+                             <strong>The Union Jack (or Union Flag):</strong><br>
+                             The UK's national flag is a combination of flags representing different parts of the kingdom:<br>
+                             - <strong>1606:</strong> After the Union of the Crowns (James VI of Scotland also became James I of England and Ireland), the flag of England was superimposed onto the flag of Scotland to create the first Union Flag.<br>
+                             - <strong>1801:</strong> With the Act of Union that united Great Britain and Ireland, the St. Patrick's Saltire was added to the design, creating the Union Jack we know today.  <br><br>
+                             <strong>Discussion:</strong><br>
+                             - Why do you think the Welsh flag isn't part of the Union Jack design?<br>
+                             - What does the Union Jack symbolise to you?<br>
+                             - Are national flags still important symbols in the 21st century?`
                         ]
                     },
                     {
@@ -981,6 +1012,12 @@
                             "How does the community come together to celebrate local traditions or holidays?"
                         ]
                     }
+                ]
+            },
+            25: { // Geography and Nature
+                title: "Geography and Nature",
+                subtopics: [
+                    // Content will be added via a special function
                 ]
             }
         };
@@ -1430,108 +1467,228 @@
             return box;
         };
 
-        const createCzechFoodAccordion = () => {
-            const foodData = [
-                { name: "Svíčková na smetaně", description: "Often considered the national dish, it consists of a slice of braised beef sirloin in a creamy vegetable sauce, typically served with bread dumplings (houskové knedlíky), a slice of lemon, cranberry sauce, and a dollop of whipped cream." },
-                { name: "Vepřo knedlo zelo", description: "A quintessential Czech meal. It features roasted pork, served with either bread or potato dumplings, and braised sauerkraut." },
-                { name: "Guláš", description: "A rich, slow-cooked meat stew, usually made with beef, seasoned with paprika and other spices. It's thicker than Hungarian goulash and is almost always served with bread dumplings or slices of dark bread." },
-                { name: "Řízek", description: "A thin slice of meat (usually pork or chicken) that is breaded and fried. It's a very popular and versatile dish, commonly served with potato salad or boiled potatoes." },
-                { name: "Smažený sýr", description: "A thick slice of cheese (usually Edam or Hermelín) that is breaded and deep-fried. It's a popular and indulgent fast-food or pub meal, typically served with tartar sauce and french fries." },
-                { name: "Ovocné knedlíky", description: "A beloved sweet main course or dessert. These are soft dumplings made from various types of dough (leavened, potato, or quark) filled with seasonal fruit like strawberries, apricots, or plums. They are often served topped with melted butter, sugar, and grated quark or poppy seeds." }
+        const createGeographyMatchUp = () => {
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6 select-none';
+            
+            const leftItems = [
+                "state", "city", "waterfall", "county", "canal", "range", "valley",
+                "province", "ocean", "mountain", "harbour", "island", "river",
+                "capital (city)", "village", "country", "continent", "desert", "stream"
+            ];
+            
+            const rightItems = [
+                "the Atlantic", "Ankara", "Munich", "the Sahara", "Niagara", "Everest",
+                "Mexico", "Bali", "the Suez", "Asia", "the Himalayas", "the Nile", "Ohio"
             ];
 
-            const box = document.createElement('div');
-            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
-            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Popular Czech Dishes</h3><div id="czech-food-accordion"></div>`;
+            const correctMatches = {
+                "state": "Ohio",
+                "city": "Munich",
+                "waterfall": "Niagara",
+                "canal": "the Suez",
+                "range": "the Himalayas",
+                "ocean": "the Atlantic",
+                "mountain": "Everest",
+                "island": "Bali",
+                "river": "the Nile",
+                "capital (city)": "Ankara",
+                "country": "Mexico",
+                "continent": "Asia",
+                "desert": "the Sahara"
+            };
 
-            const accordionContainer = box.querySelector('#czech-food-accordion');
+            let selectedLeft = null;
+            let selectedRight = null;
 
-            foodData.forEach((food, index) => {
-                const item = document.createElement('div');
-                item.className = 'border-b border-slate-200 last:border-b-0';
-
-                item.innerHTML = `
-                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
-                        <div class="flex justify-between items-center">
-                            <span class="font-medium text-slate-700">${food.name}</span>
-                            <svg class="w-5 h-5 text-sky-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </div>
-                    </button>
-                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
-                        <p class="p-4 pt-0 text-slate-600">${food.description}</p>
+            const renderGame = () => {
+                const gameContainer = document.createElement('div');
+                gameContainer.innerHTML = `
+                    <h3 class="text-xl font-semibold text-sky-800 mb-4">Task 1. Places and Features - Match Up</h3>
+                    <p class="text-sm text-slate-600 mb-4">Match the words on the left with an example on the right. Click a category on the left, then click its matching example on the right. Some words on the left do not have a match!</p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div id="left-col" class="flex flex-col space-y-2"></div>
+                        <div id="right-col" class="flex flex-col space-y-2"></div>
                     </div>
+                    <div id="feedback-msg" class="mt-4 h-6 text-center font-semibold text-sm"></div>
                 `;
-                
-                const button = item.querySelector('button');
-                const description = item.querySelector('.description');
-                const arrow = item.querySelector('svg');
 
-                button.addEventListener('click', () => {
-                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
-                    if (isOpen) {
-                        description.style.maxHeight = '0px';
-                        arrow.classList.remove('rotate-180');
-                    } else {
-                        description.style.maxHeight = description.scrollHeight + 'px';
-                        arrow.classList.add('rotate-180');
-                    }
+                const leftCol = gameContainer.querySelector('#left-col');
+                const rightCol = gameContainer.querySelector('#right-col');
+                const feedbackMsg = gameContainer.querySelector('#feedback-msg');
+
+                leftItems.forEach(item => {
+                    const btn = document.createElement('button');
+                    btn.textContent = item;
+                    btn.className = 'p-3 bg-white border border-slate-300 rounded-lg shadow-sm text-left hover:bg-sky-50 transition-colors focus:outline-none disabled:opacity-50 disabled:bg-slate-100';
+                    btn.dataset.value = item;
+                    
+                    btn.onclick = () => {
+                        if (btn.classList.contains('bg-green-100')) return; // Already matched
+                        
+                        // Deselect previous left
+                        if (selectedLeft) {
+                            selectedLeft.classList.remove('ring-2', 'ring-sky-500', 'bg-sky-100');
+                            selectedLeft.classList.add('bg-white');
+                        }
+                        
+                        // Select new
+                        selectedLeft = btn;
+                        btn.classList.remove('bg-white');
+                        btn.classList.add('ring-2', 'ring-sky-500', 'bg-sky-100');
+                        
+                        checkMatch();
+                    };
+                    leftCol.appendChild(btn);
                 });
 
-                accordionContainer.appendChild(item);
-            });
+                rightItems.forEach(item => {
+                    const btn = document.createElement('button');
+                    btn.textContent = item;
+                    btn.className = 'p-3 bg-white border border-slate-300 rounded-lg shadow-sm text-left hover:bg-sky-50 transition-colors focus:outline-none disabled:opacity-50 disabled:bg-slate-100';
+                    btn.dataset.value = item;
 
+                    btn.onclick = () => {
+                        if (btn.classList.contains('bg-green-100')) return; // Already matched
+
+                        // Deselect previous right
+                        if (selectedRight) {
+                            selectedRight.classList.remove('ring-2', 'ring-sky-500', 'bg-sky-100');
+                            selectedRight.classList.add('bg-white');
+                        }
+
+                        // Select new
+                        selectedRight = btn;
+                        btn.classList.remove('bg-white');
+                        btn.classList.add('ring-2', 'ring-sky-500', 'bg-sky-100');
+
+                        checkMatch();
+                    };
+                    rightCol.appendChild(btn);
+                });
+
+                const checkMatch = () => {
+                    if (selectedLeft && selectedRight) {
+                        const leftVal = selectedLeft.dataset.value;
+                        const rightVal = selectedRight.dataset.value;
+
+                        if (correctMatches[leftVal] === rightVal) {
+                            // Correct Match
+                            selectedLeft.classList.remove('ring-2', 'ring-sky-500', 'bg-sky-100');
+                            selectedLeft.classList.add('bg-green-100', 'border-green-500', 'text-green-800');
+                            selectedRight.classList.remove('ring-2', 'ring-sky-500', 'bg-sky-100');
+                            selectedRight.classList.add('bg-green-100', 'border-green-500', 'text-green-800');
+                            
+                            selectedLeft.disabled = true;
+                            selectedRight.disabled = true;
+
+                            selectedLeft = null;
+                            selectedRight = null;
+                            feedbackMsg.textContent = "Correct match!";
+                            feedbackMsg.className = "mt-4 h-6 text-center font-semibold text-sm text-green-600";
+                        } else {
+                            // Incorrect Match
+                            feedbackMsg.textContent = "Not a match. Try again.";
+                            feedbackMsg.className = "mt-4 h-6 text-center font-semibold text-sm text-red-500";
+                            
+                            const tempLeft = selectedLeft;
+                            const tempRight = selectedRight;
+
+                            tempLeft.classList.add('bg-red-100');
+                            tempRight.classList.add('bg-red-100');
+
+                            setTimeout(() => {
+                                tempLeft.classList.remove('ring-2', 'ring-sky-500', 'bg-sky-100', 'bg-red-100');
+                                tempLeft.classList.add('bg-white');
+                                tempRight.classList.remove('ring-2', 'ring-sky-500', 'bg-sky-100', 'bg-red-100');
+                                tempRight.classList.add('bg-white');
+                            }, 500);
+
+                            selectedLeft = null;
+                            selectedRight = null;
+                        }
+                    } else {
+                        feedbackMsg.textContent = "";
+                    }
+                };
+
+                box.appendChild(gameContainer);
+            };
+
+            renderGame();
             return box;
         };
-        
-        const createBritishFoodAccordion = () => {
-            const foodData = [
-                { name: "Fish and Chips", description: "A classic British takeaway dish. It consists of a battered and deep-fried fish fillet (usually cod or haddock) served with thick-cut fried potatoes (chips). Often seasoned with salt and vinegar." },
-                { name: "Sunday Roast", description: "A traditional British meal served on Sundays. It includes roasted meat (beef, chicken, lamb, or pork), roast potatoes, Yorkshire pudding, stuffing, vegetables, and a rich gravy." },
-                { name: "Bangers and Mash", description: "A comforting and popular dish, consisting of sausages ('bangers') served with mashed potatoes. It is often accompanied by onion gravy." },
-                { name: "Shepherd's Pie / Cottage Pie", description: "A hearty baked dish of minced meat (lamb for Shepherd's Pie, beef for Cottage Pie) cooked in a gravy with vegetables, topped with a layer of mashed potato." },
-                { name: "Full English Breakfast", description: "A substantial breakfast plate that typically includes bacon, sausages, eggs, baked beans, fried mushrooms, grilled tomatoes, and fried bread or toast." },
-                { name: "Afternoon Tea", description: "A light meal traditionally eaten between 4 PM and 6 PM. It includes a selection of sandwiches, scones with clotted cream and jam, and a variety of cakes and pastries, all served with tea." }
-            ];
 
+        const createGeographyGapFill = () => {
             const box = document.createElement('div');
             box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
-            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Popular British Dishes</h3><div id="british-food-accordion"></div>`;
+            
+            const words = ["safer", "amenities", "peaceful", "nature", "pollution", "commuters", "jams", "crowded", "suburbs", "fresh", "rush hour", "countryside", "rural", "stressful", "fields", "public", "nightlife", "urban", "cosmopolitan"];
+            const sortedWords = [...words].sort();
+            const optionsHtml = `<option value="">...</option>` + sortedWords.map(w => `<option value="${w}">${w}</option>`).join('');
 
-            const accordionContainer = box.querySelector('#british-food-accordion');
+            const textParts = [
+                "I've always preferred an ", // 0: urban
+                " lifestyle to a ", // 1: rural
+                " lifestyle. I'd much rather live in a city than in the ", // 2: countryside
+                " because there's so much more to do. The ", // 3: nightlife
+                " is great - lots of bars, restaurants and nightclubs - and there are lots of ", // 4: amenities
+                " such as sports centres, swimming pools, museums and so on. What I particularly like is the fact that my home city is so ", // 5: cosmopolitan
+                "; there are people there from all over the world.<br><br>Of course, with so many people everywhere it can get very ", // 6: crowded
+                ", especially during the ", // 7: rush hour
+                " (in my city, this is between 7 and 9 in the morning, and between 4 and 6 in the evening). At those times, the trains and buses are packed with ", // 8: commuters
+                " coming to the city to work, and then going back to the ", // 9: suburbs
+                " around the city where many of them live. Those who don't use ", // 10: public
+                " transport drive to the city in their own cars; this causes terrible traffic ", // 11: jams
+                " on the roads, and of course lots of ", // 12: pollution
+                ", which makes the air dirty and unpleasant. It can get quite ", // 13: stressful
+                " at times.<br><br>Consequently, it is good to get away from the city now and then, and get back to ", // 14: nature
+                "; lots of lovely ", // 15: fresh
+                " air, green ", // 16: fields
+                " and ", // 17: peaceful
+                " villages where the only noise is the sound of birds and sheep. It's also much ", // 18: safer
+                "; there's less crime and the roads aren't as dangerous."
+            ];
 
-            foodData.forEach((food, index) => {
-                const item = document.createElement('div');
-                item.className = 'border-b border-slate-200 last:border-b-0';
+            const answers = ["urban", "rural", "countryside", "nightlife", "amenities", "cosmopolitan", "crowded", "rush hour", "commuters", "suburbs", "public", "jams", "pollution", "stressful", "nature", "fresh", "fields", "peaceful", "safer"];
 
-                item.innerHTML = `
-                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
-                        <div class="flex justify-between items-center">
-                            <span class="font-medium text-slate-700">${food.name}</span>
-                            <svg class="w-5 h-5 text-sky-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </div>
-                    </button>
-                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
-                        <p class="p-4 pt-0 text-slate-600">${food.description}</p>
-                    </div>
-                `;
-                
-                const button = item.querySelector('button');
-                const description = item.querySelector('.description');
-                const arrow = item.querySelector('svg');
+            let htmlContent = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Task: Complete the text</h3>
+            <div class="bg-white p-4 rounded-lg border border-slate-200 mb-4 text-sm font-medium text-slate-600 flex flex-wrap gap-2 justify-center">
+                ${words.map(w => `<span class="bg-slate-100 px-2 py-1 rounded border border-slate-300">${w}</span>`).join('')}
+            </div>
+            <div class="text-slate-700 leading-loose">`;
 
-                button.addEventListener('click', () => {
-                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
-                    if (isOpen) {
-                        description.style.maxHeight = '0px';
-                        arrow.classList.remove('rotate-180');
-                    } else {
-                        description.style.maxHeight = description.scrollHeight + 'px';
-                        arrow.classList.add('rotate-180');
-                    }
-                });
-
-                accordionContainer.appendChild(item);
+            textParts.forEach((part, index) => {
+                htmlContent += part;
+                if (index < answers.length) {
+                    htmlContent += `<select id="geo-gap-${index}" class="border-b-2 border-sky-400 bg-transparent focus:outline-none focus:border-sky-600 transition-colors mx-1 text-sky-700 font-medium">${optionsHtml}</select>`;
+                }
             });
+
+            htmlContent += `</div>
+            <button id="check-geo-gap" class="mt-6 bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">Check Answers</button>
+            <div id="results-geo-gap" class="mt-4"></div>`;
+
+            box.innerHTML = htmlContent;
+
+            setTimeout(() => {
+                 document.getElementById('check-geo-gap').addEventListener('click', () => {
+                    let score = 0;
+                    const resultsContainer = document.getElementById('results-geo-gap');
+                    answers.forEach((answer, index) => {
+                        const select = document.getElementById(`geo-gap-${index}`);
+                        if (select.value === answer) {
+                            score++;
+                            select.classList.remove('border-red-500');
+                            select.classList.add('border-green-500', 'bg-green-50');
+                        } else {
+                            select.classList.remove('border-green-500');
+                            select.classList.add('border-red-500', 'bg-red-50');
+                        }
+                    });
+                    resultsContainer.innerHTML = `<p class="font-semibold ${score === answers.length ? 'text-green-600' : 'text-slate-700'}">You scored ${score} out of ${answers.length}.</p>`;
+                });
+            }, 0);
 
             return box;
         };
@@ -1620,7 +1777,7 @@
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3A:</strong> Traditional English breakfast</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3B:</strong> Fish and chips</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3C:</strong> Cheeseburger</li>
-                                <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3D:</strong> Peanut butter</li>
+                                <li class="flex items-start"><span classs="text-sky-500 mr-2">▶</span><strong>3D:</strong> Peanut butter</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3E:</strong> Chicken and chips / French fries</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3F:</strong> Muffin</li>
                             </ul>
@@ -1633,6 +1790,169 @@
             box.innerHTML = content;
             return box;
         };
+
+        const createUKBridge19Accordion = () => {
+            const questionData = [
+                { 
+                    question: "What basic facts do you know about the United Kingdom?", 
+                    answer: "The United Kingdom is located / situated in north-west Europe on the island of Great Britain and the northern part of the island of Ireland. It is made up of / consists of / is comprised of four countries: England, Scotland, Wales and Northern Ireland. The country's political system is a constitutional monarchy, which means it has a parliament and a monarch. At the moment the monarch is Queen Elizabeth II. The country has a temperate climate and is famous for its wet weather. Informally, the national flag of the United Kingdom is called the Union Jack." 
+                },
+                { 
+                    question: "Can you tell me something more specific about each of the four countries?", 
+                    answer: "England is the largest of the countries and it is the seat of political power. The Houses of Parliament and Buckingham Palace are found here. England also has many other famous places such as Liverpool, where the Beatles started, Manchester, home to Manchester United football team, Oxford, where one of the oldest universities in the world was established; the mysterious stone formation, Stonehenge, can be found near Salisbury. Scotland was an independent state until 1707 when it joined a union with the Kingdom of England. In 1999 the Scottish Parliament was reopened. The capital is Edinburgh. Scotland is quite mountainous and the United Kingdom's highest peak, Ben Nevis, is found here. Apart from English, Scottish Gaelic is spoken here. Wales' official language is Welsh but English is more widely spoken. Cardiff is the capital. Rugby is a popular sport in Wales. Northern Ireland remained part of the United Kingdom when Ireland gained independence. The country also has its own government. The capital and largest city is Belfast." 
+                },
+                { 
+                    question: "Could you describe some of the United Kingdom's geographical features?", 
+                    answer: "The landscape / terrain of England is mostly hilly, though many of the hills are quite small. The countryside / landscape is very green. There are many fields and pastures. The north is more mountainous, especially in Scotland where you will find the Highlands. The longest river in the United Kingdom is the Severn. It rises in Wales. The Thames, which flows through London, is the second longest. Loch Ness in Scotland is the largest lake by volume. The largest lake by area is Lough Neagh in Northern Ireland." 
+                },
+                { 
+                    question: "What are some of the famous places to visit in London?", 
+                    answer: "In London, you will find... Westminster, which has the Houses of Parliament and the clock tower which contains Big Ben, a large bell... Buckingham Palace, where the Queen lives... Hyde Park, one of the largest parks in London, where they have Speakers' Corner, a place people gather to express / air their opinions / views on many topics... the London Eye, the largest ferris wheel in Europe... Madame Tussaud's Wax Museum, a popular tourist destination where people can see life-like wax sculptures of famous people. You can go to... the West End to see a play or musical... the National Gallery to see many famous paintings... the British Museum to see many historical exhibits." 
+                },
+                { 
+                    question: "Who are some famous people from the United Kingdom?", 
+                    answer: "Famous people from the United Kingdom include... William Shakespeare, a playwright and poet from the 16th and 17th century... Isaac Newton, who developed among other things the theory of gravity... the Beatles, who are one of the most popular pop groups of all time... Charles Dickens, a novelist from the 19th century... Monty Python, a very influential comedy group. The United Kingdom is also famous for many fictitious characters such as the spy James Bond, the detective Sherlock Holmes and the boy wizard Harry Potter." 
+                },
+                { 
+                    question: "What are some foods which you associate with the United Kingdom?", 
+                    answer: "Foods associated with / typical for the United Kingdom are... brown sauce, a savoury sauce eaten with chips and ham... haggis, sheep stomach stuffed with offal, oatmeal and spices... marmite, a salty spread made from yeast... the sandwich, cold meat and vegetables placed between two pieces of bread... pies, pastry filled with beef, onions and vegetables... Yorkshire pudding, small savoury puddings made from flour, milk and eggs and baked in oil." 
+                },
+                { 
+                    question: "Could you describe some sports and pastimes popular in the United Kingdom?", 
+                    answer: "British people like / enjoy... playing football, with matches on most weekends... cricket in the summer... rugby, which is associated with public school students... polo, if they are very rich... going rambling, which is to go for a hike... watching horse-racing... seeing pantomimes at Christmas time... going to the local pub for a pint... doing DIY." 
+                },
+                { 
+                    question: "Would you like to go to the United Kingdom? Why?", 
+                    answer: "I would like to go / I want to go... to improve / practise my English... to get a job... because I'm curious / I've heard a lot about this country... because I'm interested in British culture... because it is a modern cosmopolitan country. I have already been to London / Scotland. It was a great opportunity to... practise my English / actually see places I have been learning about. I am not really interested in going to England because I think the culture is very similar to ours. I would rather go to the USA or Australia." 
+                }
+            ];
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">General Questions (from Bridge 19)</h3><div id="uk-bridge19-accordion"></div>`;
+
+            const accordionContainer = box.querySelector('#uk-bridge19-accordion');
+
+            questionData.forEach((item, index) => {
+                const el = document.createElement('div');
+                el.className = 'border-b border-slate-200 last:border-b-0';
+
+                el.innerHTML = `
+                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-slate-700">${item.question}</span>
+                            <svg class="w-5 h-5 text-sky-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
+                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <p class="p-4 pt-0 text-slate-600">${item.answer}</p>
+                    </div>
+                `;
+                
+                const button = el.querySelector('button');
+                const description = el.querySelector('.description');
+                const arrow = el.querySelector('svg');
+
+                button.addEventListener('click', () => {
+                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
+                    if (isOpen) {
+                        description.style.maxHeight = '0px';
+                        arrow.classList.remove('rotate-180');
+                    } else {
+                        description.style.maxHeight = description.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180');
+                    }
+                });
+
+                accordionContainer.appendChild(el);
+            });
+
+            return box;
+        };
+
+        const createGeographyAccordion = () => {
+            const questionData = [
+                {
+                    question: "Can you describe the landscape of the place / region where you live / go to school?",
+                    answer: "I live in a highland area / by a river. Coniferous / pine forests / rolling lowlands are typical for the region. There are farmlands/fields/meadows/plains / hills / (not) many woods / wooded areas... around / near the place where I live. Unfortunately, solar farms / factory chimneys / huge warehouses spoil the view. There isn't much nature round the place where I live, only a few parks / grass and patches of shrubs... Behind / Near the house / apartment block / place where I live is a pond / river / stream."
+                },
+                {
+                    question: "Do you think your country / the region where you live has a lot to offer to 'nature-loving' tourists?",
+                    answer: "The country / region has a very beautiful / diverse / picturesque... landscape. The country / region has a lot to offer, for example, sandstone rock towns / deep forests / ponds / rivers..., diverse / unique flora / fauna. Tourists can admire / visit... unique / amazing rock formations / caves... Some of the most beautiful spots / natural landmarks are... There are four / numerous national parks / natural preserves. The highlands / border areas are overflowing with / typically have forests / meadows. Unfortunately, the region doesn't have much to offer / is lacking any... This region would be of little interest to tourists because we don't have (any) forests / mountains."
+                },
+                {
+                    question: "Can you describe the vegetation around your home/ school / city?",
+                    answer: "There's a park with oak / birch / spruce... trees / a huge / mighty lime tree and a forest / wood right behind / in front of /near my / our house. There are mixed / broad / needle leaf forests, farm fields, orchards, vineyards, wheat / sunflower fields... (almost) everywhere / around the place where I live. A meadow / grass field / river... is right behind our house. There's almost no vegetation where I live, only houses / roads."
+                },
+                {
+                    question: "What are some wild animals / birds that live in your country / region?",
+                    answer: "The country / region... is home to a variety of / many animals / birds..., such as beavers / weasels... / magpies/ducks. Some of the most common forest animals are deer / wild boars / (red) foxes... Mice/hares/partridges / pheasants... are common inhabitants of grasslands / fields... If you are lucky, you can come across / see a white / black stork / badger... Squirrels... live in city parks..."
+                },
+                {
+                    question: "How should a person / you behave in forests / preserved areas? Why?",
+                    answer: "We / I shouldn't make noise / shout because we / I could disturb the animals. Picking/digging / stomping/stepping on plants / flowers can be harmful to rare species. Making / Starting fires is prohibited because forests can / could easily be set on fire / burn. We / I shouldn't touch dead / wounded/ wild animals... because they could be infected / have rabies. You mustn't cut trees / hunt in forests unless allowed / if (it is) not permitted..."
+                },
+                {
+                    question: "What weather can I expect in your country... in summer/winter?",
+                    answer: "You can expect a warm / hot and humid summer with a lot of sunshine and a cold / mild to cool winter with temperatures below / just above zero, a lot of/no snow / rain. If you come in summer / winter..., don't expect... Summers are / can be quite / very hot / dry here. Springtime is rainy / cool... with changeable weather. Autumn / Fall is cold / wet and cloudy/ grey. The weather is changeable / stable... at this time of the year. Of course, occasional hailstorms / snowstorms/tornadoes can happen / occur."
+                },
+                {
+                    question: "Is your country / region... often affected by natural disasters?",
+                    answer: "The country / city where I live is often / rarely affected by floods / earthquakes. Hailstorms / snowstorms / wildfires... are quite common in summer / occur in some regions. Avalanches / Storms are rare / frequent in the south/ in the mountains. There have been some (devastating) floods recently / in the past ten years. My village was hit by floods more than once / twice last year. Lightning has damaged the townhall."
+                },
+                {
+                    question: "What are some things you (can) do to help preserve the environment?",
+                    answer: "I do quite a lot / a bit for the environment... / I am quite a green person... / I am a bit lazy about it, but I would really like to do more / help more often. I (can) help / protect the environment in a number of ways - I can use public transport instead of private / leave my car at home. I recycle (only) / don't recycle, because... If I can choose between two products, I pick the one with the least packaging. Drinking tap water instead of bottled water is a good way to produce less trash."
+                },
+                {
+                    question: "Should animals be kept in zoos? What do you think?",
+                    answer: "Zoos are important / useless. Zoos are of little / great importance... nowadays. Some endangered / rare animal species would die out / become extinct if people didn't take care of/ breed / help them reproduce. If we / people were more sensitive to nature / didn't kill wild animals... we wouldn't have to keep them in zoos. I am against zoos. I dislike / don't like when animals are kept in cages."
+                }
+            ];
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Maturita Card 27: Geography And Nature</h3><div id="geography-accordion"></div>`;
+
+            const accordionContainer = box.querySelector('#geography-accordion');
+
+            questionData.forEach((item, index) => {
+                const el = document.createElement('div');
+                el.className = 'border-b border-slate-200 last:border-b-0';
+
+                el.innerHTML = `
+                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-slate-700">${item.question}</span>
+                            <svg class="w-5 h-5 text-sky-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
+                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <p class="p-4 pt-0 text-slate-600">${item.answer}</p>
+                    </div>
+                `;
+                
+                const button = el.querySelector('button');
+                const description = el.querySelector('.description');
+                const arrow = el.querySelector('svg');
+
+                button.addEventListener('click', () => {
+                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
+                    if (isOpen) {
+                        description.style.maxHeight = '0px';
+                        arrow.classList.remove('rotate-180');
+                    } else {
+                        description.style.maxHeight = description.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180');
+                    }
+                });
+
+                accordionContainer.appendChild(el);
+            });
+
+            return box;
+        };
+
 
         // --- MAIN LOGIC ---
 
@@ -1661,6 +1981,16 @@
                 topicContent.appendChild(createBritishFoodAccordion());
                 topicContent.appendChild(createCzechCuisineTaskBox());
                 topicContent.appendChild(createFoodTaskTwoBox());
+            }
+            // Special content for UK (Topic 19)
+            if (topicId == 19) {
+                topicContent.appendChild(createUKBridge19Accordion());
+            }
+            // Special content for Geography (Topic 25)
+            if (topicId == 25) {
+                topicContent.appendChild(createGeographyAccordion());
+                topicContent.appendChild(createGeographyMatchUp());
+                topicContent.appendChild(createGeographyGapFill());
             }
 
 
@@ -1751,4 +2081,3 @@
     </script>
 </body>
 </html>
-
