@@ -143,6 +143,7 @@
                     }
                 ]
             },
+            // ... (Other topics preserved)
             3: { // Problems of Mankind
                 title: "Problems of Mankind",
                 subtopics: [
@@ -184,6 +185,7 @@
                     }
                 ]
             },
+            // ... (Topics 4-18 preserved)
             4: { // Environmental Problems
                 title: "Environmental Problems",
                 subtopics: [
@@ -1051,6 +1053,101 @@
             return card;
         };
         
+        const createHealthMaturitaAccordion = () => {
+            const healthData = [
+                {
+                    question: "What symptoms might you have so that you have to go the doctor / GP?",
+                    answer: "I've got a headache... My head hurts / is sore / is throbbing... My stomach/tummy / belly... I have a stomachache / bellyache / tummy ache... I have an upset stomach... My stomach is in pain / agony... I have a burning sensation in my stomach/ tummy... I feel sick / nauseous / like vomiting... I have been sick / vomiting/throwing up... My eyes are sore... My vision is blurry /fuzzy/hazy... I'm seeing spots... I'm having trouble seeing... I have an ear ache... My ear hurts... I have trouble hearing... I have a temperature / fever... I have bloody / runny nose... My nose is bleeding/running... I have sore throat... I have an itchy throat... My throat is itching / burning... I'm having trouble breathing... I'm short of breath... I have a rash / burning (itchy) sensation / funny spots on my skin... My skin is itchy / dry/ scaly... It hurts to breathe / swallow... I have cold / the flu... I missed my period... I've twisted / sprained/broken/ fractured my ankle/arm/knee /leg/wrist... My joints / muscles ache... feel stiff... I have / suffer from high/low blood pressure... I have... an allergic reaction / allergy to... wheat / pollen dust/ mold."
+                },
+                {
+                    question: "What does the doctor / GP do when you visit him/her?",
+                    answer: "Usually he / she...takes / checks my temperature (with a thermometer) / blood pressure (with a blood pressure monitor / sphygmomanometer) / pulse (with a stethoscope)... checks / looks at my eyes / ears... He/she speaks with me about my problem / illness... asks questions... gives me advice... writes a prescription... refers me to a specialist... changes / checks my bandages... checks my condition/symptoms/how I am healing."
+                },
+                {
+                    question: "Why would you go to hospital?",
+                    answer: "I would go to hospital if... I had food poisoning... had been poisoned... had a serious injury / fracture / broken bone.... injured my spine / backbone / head... I had been in a serious / terrible accident... I had been diagnosed / needed treatment for a serious disease like cancer / pneumonia / typhus... if I had a heart attack / a seizure / a stroke... I had to / needed to go in for an operation... I was going to give birth."
+                },
+                {
+                    question: "What are some serious diseases / illnesses / conditions? Can you describe some of the symptoms?",
+                    answer: "Epilepsy is a disease / condition of the nervous system. It causes people to have fits / seizures... Cancer is a disease which can affect any organ. It affects how cells grow. Cancer can be caused by smoking / too much sun / too much meat /radiation/chemicals... Strokes are when a blood vessel / artery is blocked by fatty tissue. Strokes are likely when people have diets high in fat / low in fibre... don't exercise enough."
+                },
+                {
+                    question: "What are some medical specialists and what do they do?",
+                    answer: "An optometrist is someone who checks / looks after our eyes... gives us an eye test... prescribes glasses... A surgeon operates on us... a paediatrician (= pediatrician AmE) is a doctor for / a specialist in children... A podiatrist is a doctor / specialist for our feet... A dermatologist is someone / the person we see for problems / conditions with the skin."
+                },
+                {
+                    question: "When do you need to go to / visit the dentist?",
+                    answer: "I need to / must visit the dentist for... a regular check-up... if I have toothache... if my gums bleed / hurt / are in pain... if I chip/break/lose a tooth... if I have a cavity / hole in my tooth... to get braces / a plate / a filling... to have my teeth capped/whitened... to have a tooth pulled out / removed."
+                },
+                {
+                    question: "What can we do to prevent getting sick / falling ill?",
+                    answer: "We can eat a healthy diet... take regular exercise / exercise regularly... avoid fatty / greasy foods...dress warmly / stay warm in the winter... have a shot of plum brandy once a day (it works for my Grandpa)... get flu shots / vaccines... get vaccinated/immunized against diseases / illnesses / viruses / the flu/ the cold... not smoke / drink too much."
+                },
+                {
+                    question: "What would you recommend someone with a cold / the flu?",
+                    answer: "I would recommend that they / tell them... to get plenty of rest... to have hot tea with lemon... to take two aspirins / some antibiotics/cough syrup... to have chicken soup... to take cold and flu tablets / medicine / medication... to stay indoors. I would tell them not... to take antibiotics because they don't help... not to smoke if they do."
+                },
+                {
+                    question: "What would you do if someone had a stomachache?",
+                    answer: "I would tell them to / recommend that they... avoid dairy / rich /greasy/spicy foods / alcohol... drink lots of water... get lots of rest... take anti- diarrhoea (= diarrhea AmE) medicine / medication/formula."
+                },
+                {
+                    question: "What do you do if someone sprains a muscle?",
+                    answer: "You must...rest the sprained / injured limp immediately... wrap/compress the area / swelling with a bandage / air cast/ splint... elevate the injured / sprained limb/arm/leg... put ice on the sprain/injury / swelling."
+                },
+                {
+                    question: "What happens when you break a bone?",
+                    answer: "The doctor takes an x-ray... You get an x-ray of the break / fracture / broken bone / fractured bone.... The doctor puts the break / fracture / broken bone / fractured bone in plaster / cast... The doctor ties a splint to the broken / fractured bone... The doctor gives you crutches / a wheelchair."
+                },
+                {
+                    question: "What medication do you need a prescription for / can you buy 'over the counter'?",
+                    answer: "You can buy/get...aspirin... cold and flu / pills / tablets / capsules... cough syrup / mild painkillers... anti-diarrhoea formula... eye drops... herbal teas... acne cream without a prescription. [You don't need a prescription for...] You do need a prescription for... antibiotics / strong painkillers / heart tablets."
+                }
+            ];
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Maturita Card 8: Health</h3><div id="health-maturita-accordion"></div>`;
+
+            const accordionContainer = box.querySelector('#health-maturita-accordion');
+
+            healthData.forEach((item, index) => {
+                const el = document.createElement('div');
+                el.className = 'border-b border-slate-200 last:border-b-0';
+
+                el.innerHTML = `
+                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-slate-700 pr-4">${item.question}</span>
+                            <svg class="w-5 h-5 text-sky-600 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
+                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <p class="p-4 pt-0 text-slate-600">${item.answer}</p>
+                    </div>
+                `;
+                
+                const button = el.querySelector('button');
+                const description = el.querySelector('.description');
+                const arrow = el.querySelector('svg');
+
+                button.addEventListener('click', () => {
+                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
+                    if (isOpen) {
+                        description.style.maxHeight = '0px';
+                        arrow.classList.remove('rotate-180');
+                    } else {
+                        description.style.maxHeight = description.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180');
+                    }
+                });
+
+                accordionContainer.appendChild(el);
+            });
+
+            return box;
+        };
+
         const createCzechHolidayAccordion = () => {
             const holidayData = [
                 { date: "1 January", name: "New Year's Day / Restoration Day of the Independent Czech State", description: "This double holiday celebrates both the start of the new year and the establishment of the independent Czech Republic in 1993 after the peaceful dissolution of Czechoslovakia." },
@@ -1218,6 +1315,79 @@
                             select.classList.remove('border-green-500');
                             select.classList.add('border-red-500');
                         }
+                    });
+                    resultsContainer.innerHTML = `<p class="font-semibold">You scored ${score} out of ${quizData.answers.length}.</p>`;
+                });
+            }, 0);
+
+            return box;
+        };
+
+        const createEatingDisorderQuiz = () => {
+            const quizData = {
+                title: "Interactive Activity: Eating Disorders",
+                id: "eating-disorder-quiz",
+                sentences: [
+                    "Eating disorders are conditions defined by _ eating habits.",
+                    "They may involve either _ or excessive food intake.",
+                    "They have effect on both the _ and mental health of an individual.",
+                    "Bulimia and _ are the most common specific forms in the United Kingdom.",
+                    "Other types include _ eating and eating disorder not otherwise specified.",
+                    "Bulimia is characterized by binge eating and _. Purging can include self-induce vomiting, over-exercising, and the usage of diuretics and _.",
+                    "Anorexia is characterized by extreme food restriction to the point of _ and excessive weight loss.",
+                    "Though primarily thought of as affecting females, eating disorders affect males as well (an estimated 10 – 15% of people with eating disorders are males).",
+                    "Although eating disorders are increasing all over the world among both men and women, there is evidence to suggest that it is women in the Western world who are at the highest risk of developing them and the degree of _ increases the risk.",
+                    "Nearly half of all Americans personally know someone with an eating disorder."
+                ],
+                options: ["abnormal", "insufficient", "physical", "anorexia", "binge", "purging", "laxatives", "self-starvation", "westernization"],
+                answers: ["abnormal", "insufficient", "physical", "anorexia", "binge", "purging", "laxatives", "self-starvation", "westernization"]
+            };
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            
+            let currentAnswerIndex = 0;
+            const sentenceHtml = quizData.sentences.map((s, i) => {
+                let sentence = s;
+                let htmlSentence = sentence;
+                
+                if (sentence.includes('_')) {
+                    // This handles sentences with one or more blanks
+                    htmlSentence = sentence.replace(/_/g, () => {
+                        const options = quizData.options.map(word => `<option value="${word}">${word}</option>`).join('');
+                        const select = `<select id="q-${quizData.id}-${currentAnswerIndex}" class="border-b-2 border-sky-400 bg-transparent focus:outline-none focus:border-sky-600 transition-colors mx-1"><option value="">...</option>${options}</select>`;
+                        currentAnswerIndex++;
+                        return select;
+                    });
+                    return `<p class="mb-2">${i + 1}. ${htmlSentence}</p>`;
+                } else {
+                    return `<p class="mb-2 text-slate-500">${i + 1}. ${sentence}</p>`;
+                }
+            }).join('');
+
+            box.innerHTML = `
+                <h3 class="text-xl font-semibold text-sky-800 mb-4">${quizData.title}</h3>
+                <div id="${quizData.id}" class="space-y-3 text-slate-700">${sentenceHtml}</div>
+                <button id="check-${quizData.id}" class="mt-4 bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors">Check Answers</button>
+                <div id="results-${quizData.id}" class="mt-4"></div>
+            `;
+
+            setTimeout(() => {
+                document.getElementById(`check-${quizData.id}`).addEventListener('click', () => {
+                    let score = 0;
+                    const resultsContainer = document.getElementById(`results-${quizData.id}`);
+                    quizData.answers.forEach((answer, index) => {
+                         const select = document.getElementById(`q-${quizData.id}-${index}`);
+                         if (select) {
+                             if (select.value.toLowerCase() === answer.toLowerCase()) {
+                                 score++;
+                                 select.classList.remove('border-red-500');
+                                 select.classList.add('border-green-500');
+                             } else {
+                                 select.classList.remove('border-green-500');
+                                 select.classList.add('border-red-500');
+                             }
+                         }
                     });
                     resultsContainer.innerHTML = `<p class="font-semibold">You scored ${score} out of ${quizData.answers.length}.</p>`;
                 });
@@ -1777,7 +1947,7 @@
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3A:</strong> Traditional English breakfast</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3B:</strong> Fish and chips</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3C:</strong> Cheeseburger</li>
-                                <li class="flex items-start"><span classs="text-sky-500 mr-2">▶</span><strong>3D:</strong> Peanut butter</li>
+                                <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3D:</strong> Peanut butter</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3E:</strong> Chicken and chips / French fries</li>
                                 <li class="flex items-start"><span class="text-sky-500 mr-2">▶</span><strong>3F:</strong> Muffin</li>
                             </ul>
@@ -1953,6 +2123,112 @@
             return box;
         };
 
+        const createCzechFoodAccordion = () => {
+            const foodData = [
+                { name: "Svíčková na smetaně", description: "Often considered the national dish, it consists of a slice of braised beef sirloin in a creamy vegetable sauce, typically served with bread dumplings (houskové knedlíky), a slice of lemon, cranberry sauce, and a dollop of whipped cream." },
+                { name: "Vepřo knedlo zelo", description: "A quintessential Czech meal. It features roasted pork, served with either bread or potato dumplings, and braised sauerkraut." },
+                { name: "Guláš", description: "A rich, slow-cooked meat stew, usually made with beef, seasoned with paprika and other spices. It's thicker than Hungarian goulash and is almost always served with bread dumplings or slices of dark bread." },
+                { name: "Řízek", description: "A thin slice of meat (usually pork or chicken) that is breaded and fried. It's a very popular and versatile dish, commonly served with potato salad or boiled potatoes." },
+                { name: "Smažený sýr", description: "A thick slice of cheese (usually Edam or Hermelín) that is breaded and deep-fried. It's a popular and indulgent fast-food or pub meal, typically served with tartar sauce and french fries." },
+                { name: "Ovocné knedlíky", description: "A beloved sweet main course or dessert. These are soft dumplings made from various types of dough (leavened, potato, or quark) filled with seasonal fruit like strawberries, apricots, or plums. They are often served topped with melted butter, sugar, and grated quark or poppy seeds." }
+            ];
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Popular Czech Dishes</h3><div id="czech-food-accordion"></div>`;
+
+            const accordionContainer = box.querySelector('#czech-food-accordion');
+
+            foodData.forEach((food, index) => {
+                const item = document.createElement('div');
+                item.className = 'border-b border-slate-200 last:border-b-0';
+
+                item.innerHTML = `
+                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-slate-700">${food.name}</span>
+                            <svg class="w-5 h-5 text-sky-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
+                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <p class="p-4 pt-0 text-slate-600">${food.description}</p>
+                    </div>
+                `;
+                
+                const button = item.querySelector('button');
+                const description = item.querySelector('.description');
+                const arrow = item.querySelector('svg');
+
+                button.addEventListener('click', () => {
+                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
+                    if (isOpen) {
+                        description.style.maxHeight = '0px';
+                        arrow.classList.remove('rotate-180');
+                    } else {
+                        description.style.maxHeight = description.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180');
+                    }
+                });
+
+                accordionContainer.appendChild(item);
+            });
+
+            return box;
+        };
+        
+        const createBritishFoodAccordion = () => {
+            const foodData = [
+                { name: "Fish and Chips", description: "A classic British takeaway dish. It consists of a battered and deep-fried fish fillet (usually cod or haddock) served with thick-cut fried potatoes (chips). Often seasoned with salt and vinegar." },
+                { name: "Sunday Roast", description: "A traditional British meal served on Sundays. It includes roasted meat (beef, chicken, lamb, or pork), roast potatoes, Yorkshire pudding, stuffing, vegetables, and a rich gravy." },
+                { name: "Bangers and Mash", description: "A comforting and popular dish, consisting of sausages ('bangers') served with mashed potatoes. It is often accompanied by onion gravy." },
+                { name: "Shepherd's Pie / Cottage Pie", description: "A hearty baked dish of minced meat (lamb for Shepherd's Pie, beef for Cottage Pie) cooked in a gravy with vegetables, topped with a layer of mashed potato." },
+                { name: "Full English Breakfast", description: "A substantial breakfast plate that typically includes bacon, sausages, eggs, baked beans, fried mushrooms, grilled tomatoes, and fried bread or toast." },
+                { name: "Afternoon Tea", description: "A light meal traditionally eaten between 4 PM and 6 PM. It includes a selection of sandwiches, scones with clotted cream and jam, and a variety of cakes and pastries, all served with tea." }
+            ];
+
+            const box = document.createElement('div');
+            box.className = 'bg-gradient-to-br from-white to-slate-100 p-6 rounded-2xl shadow-md mb-6';
+            box.innerHTML = `<h3 class="text-xl font-semibold text-sky-800 mb-4">Popular British Dishes</h3><div id="british-food-accordion"></div>`;
+
+            const accordionContainer = box.querySelector('#british-food-accordion');
+
+            foodData.forEach((food, index) => {
+                const item = document.createElement('div');
+                item.className = 'border-b border-slate-200 last:border-b-0';
+
+                item.innerHTML = `
+                    <button class="w-full text-left p-4 focus:outline-none" data-index="${index}">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-slate-700">${food.name}</span>
+                            <svg class="w-5 h-5 text-sky-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
+                    <div class="description overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <p class="p-4 pt-0 text-slate-600">${food.description}</p>
+                    </div>
+                `;
+                
+                const button = item.querySelector('button');
+                const description = item.querySelector('.description');
+                const arrow = item.querySelector('svg');
+
+                button.addEventListener('click', () => {
+                    const isOpen = description.style.maxHeight && description.style.maxHeight !== '0px';
+                    if (isOpen) {
+                        description.style.maxHeight = '0px';
+                        arrow.classList.remove('rotate-180');
+                    } else {
+                        description.style.maxHeight = description.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180');
+                    }
+                });
+
+                accordionContainer.appendChild(item);
+            });
+
+            return box;
+        };
+
 
         // --- MAIN LOGIC ---
 
@@ -1981,6 +2257,10 @@
                 topicContent.appendChild(createBritishFoodAccordion());
                 topicContent.appendChild(createCzechCuisineTaskBox());
                 topicContent.appendChild(createFoodTaskTwoBox());
+            }
+             // Special content for Health (Topic 9)
+            if (topicId == 9) {
+                topicContent.appendChild(createHealthMaturitaAccordion());
             }
             // Special content for UK (Topic 19)
             if (topicId == 19) {
